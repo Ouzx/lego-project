@@ -1,15 +1,30 @@
-$main: #ffcf00;
-$accent-black: #2c2c2c;
-$background-white: rgb(248, 248, 248);
+@use "global.scss" as *;
 
-$black: #000000;
-$white: #ffffff;
-
-$blue-kids: #abd9ff;
-$blue: #006db7;
-$red: #d0021b;
-
-.header {
-  color: red;
+.header-top {
+  color: $main;
   height: 55px;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $background-white;
+
+  .play-zone {
+    font-weight: 700;
+
+    background-color: $blue-kids;
+
+    border: 0;
+    border-radius: 3px;
+
+    padding: 4px 10px;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: $white;
+    }
+  }
 }
