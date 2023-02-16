@@ -47,6 +47,19 @@
     justify-content: space-evenly;
     font-size: 0.75rem;
 
+    .content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .slide {
+        text-align: center;
+        &[aria-hidden="true"] {
+          display: none;
+        }
+      }
+    }
+
     .icon {
       margin: 0 auto;
     }

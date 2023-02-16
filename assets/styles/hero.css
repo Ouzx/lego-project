@@ -61,6 +61,18 @@ html {
   justify-content: space-evenly;
   font-size: 0.75rem;
 }
+.header-top .center .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-top .center .content .slide {
+  text-align: center;
+}
+.header-top .center .content .slide[aria-hidden=true] {
+  display: none;
+}
 .header-top .center .icon {
   margin: 0 auto;
 }
