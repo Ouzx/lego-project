@@ -11,6 +11,10 @@
 
   background-color: $background-white;
 
+  a {
+    cursor: pointer;
+  }
+
   .play-zone {
     font-weight: 700;
 
@@ -27,4 +31,29 @@
       background-color: $white;
     }
   }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      background-color: transparent;
+      border: 0;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.seperator-v {
+  height: 20px;
+  width: 1px;
+  margin: 0 8px;
+  background-color: $accent-black;
 }
