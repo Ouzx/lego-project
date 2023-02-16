@@ -47,15 +47,18 @@
     justify-content: space-evenly;
     font-size: 0.75rem;
 
-    .content {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .slide {
-        text-align: center;
-        &[aria-hidden="true"] {
-          display: none;
+    .wrapper {
+      clip-path: inset(0.01rem);
+
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        position: relative;
+        .slide {
+          text-align: center;
+          min-width: 100%;
         }
       }
     }

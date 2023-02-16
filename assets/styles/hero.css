@@ -61,17 +61,19 @@ html {
   justify-content: space-evenly;
   font-size: 0.75rem;
 }
-.header-top .center .content {
-  width: 100%;
+.header-top .center .wrapper {
+  clip-path: inset(0.01rem);
+}
+.header-top .center .wrapper .content {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
+  position: relative;
 }
-.header-top .center .content .slide {
+.header-top .center .wrapper .content .slide {
   text-align: center;
-}
-.header-top .center .content .slide[aria-hidden=true] {
-  display: none;
+  min-width: 100%;
 }
 .header-top .center .icon {
   margin: 0 auto;
