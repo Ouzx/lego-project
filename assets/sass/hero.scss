@@ -42,20 +42,14 @@
     }
   }
 
-  .right {
-    display: none;
-    @include md {
-      display: flex;
-    }
-    align-items: center;
-    justify-content: space-between;
-  }
-
   .center {
-    flex: 1;
-    max-width: 34.68rem;
+    max-width: 100%;
     font-size: 0.75rem;
     margin: 0 auto;
+
+    @include md {
+      max-width: 34.68rem;
+    }
 
     .swiper-slide {
       display: flex;
@@ -76,12 +70,20 @@
     }
 
     .swiper-button-prev,
-    .swiper-button-next,
-    .cross {
+    .swiper-button-next {
       color: $accent-black;
-      fill: $accent-black;
       cursor: pointer;
+      // TODO: Known bug: when width lower than 400px, buttons are getting bigger
     }
+  }
+
+  .right {
+    display: none;
+    @include md {
+      display: flex;
+    }
+    align-items: center;
+    justify-content: space-between;
   }
 
   .icon-button {

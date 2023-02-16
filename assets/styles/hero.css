@@ -58,21 +58,15 @@ html {
 .header-top .play-zone:hover {
   background-color: #ffffff;
 }
-.header-top .right {
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-}
-@media (min-width: 900px) {
-  .header-top .right {
-    display: flex;
-  }
-}
 .header-top .center {
-  flex: 1;
-  max-width: 34.68rem;
+  max-width: 100%;
   font-size: 0.75rem;
   margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .header-top .center {
+    max-width: 34.68rem;
+  }
 }
 .header-top .center .swiper-slide {
   display: flex;
@@ -91,11 +85,19 @@ html {
   }
 }
 .header-top .center .swiper-button-prev,
-.header-top .center .swiper-button-next,
-.header-top .center .cross {
+.header-top .center .swiper-button-next {
   color: #2c2c2c;
-  fill: #2c2c2c;
   cursor: pointer;
+}
+.header-top .right {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 900px) {
+  .header-top .right {
+    display: flex;
+  }
 }
 .header-top .icon-button {
   background-color: transparent;
