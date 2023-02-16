@@ -9,6 +9,10 @@ $blue-kids: #abd9ff;
 $blue: #006db7;
 $red: #d0021b;
 
+// sizing
+$max-width: 1600px;
+$rounding: 3px;
+
 @font-face {
   font-family: "Cera Pro";
   src: url("../fonts/CeraPro-Regular.woff2") format("woff2");
