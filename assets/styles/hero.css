@@ -54,26 +54,13 @@ html {
 }
 .header-top .center {
   flex: 1;
-  flex-shrink: 0;
   max-width: 34.68rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   font-size: 0.75rem;
 }
-.header-top .center .wrapper {
-  clip-path: inset(0.01rem);
-}
-.header-top .center .wrapper .content {
+.header-top .center .swiper-slide {
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: 0.3s;
-  position: relative;
-}
-.header-top .center .wrapper .content .slide {
-  text-align: center;
-  min-width: 100%;
+  align-items: center;
 }
 .header-top .center .icon {
   margin: 0 auto;

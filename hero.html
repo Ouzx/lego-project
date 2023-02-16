@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/styles/hero.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -21,22 +25,41 @@
         </a>
 
         <div class="center">
-          <!-- prev -->
-          <button id="prev-slide" class="icon-button">
-            <img
-              class="icon"
-              src="assets/icons/next.svg"
-              alt="previous"
-              style="transform: rotateZ(180deg)"
-            />
-          </button>
-          <div class="wrapper">
-            <div class="content"></div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+
+              <span class="swiper-slide">
+                <span class="slide__text">What's on sale now? &nbsp;</span>
+                <a href="#" class="slide__link">Shop now</a>
+              </span>
+
+              <span class="swiper-slide">
+                <span class="slide__text">
+                  VIPs: Get Double Points 10/02-16/02 &nbsp;
+                </span>
+                <a href="#" class="slide__link">Shop now</a>
+              </span>
+
+              <span class="swiper-slide">
+                <span class="slide__text">
+                  Off-Road Ambulance gift with purchases over £95 &nbsp;
+                </span>
+                <a href="#" class="slide__link">*Shop now</a>
+              </span>
+
+              <span class="swiper-slide">
+                <span class="slide__text">
+                  FREE delivery on orders above £50! &nbsp;
+                </span>
+                <a href="#" class="slide__link">*Learn more</a>
+              </span>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-          <!-- next -->
-          <button id="next-slide" class="icon-button">
-            <img class="icon" src="assets/icons/next.svg" alt="next" />
-          </button>
         </div>
 
         <div class="right">
@@ -55,5 +78,16 @@
       </div>
     </header>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="assets/scripts/hero.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </html>

@@ -40,27 +40,13 @@
 
   .center {
     flex: 1;
-    flex-shrink: 0;
     max-width: 34.68rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     font-size: 0.75rem;
 
-    .wrapper {
-      clip-path: inset(0.01rem);
-
-      .content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.3s;
-        position: relative;
-        .slide {
-          text-align: center;
-          min-width: 100%;
-        }
-      }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .icon {
