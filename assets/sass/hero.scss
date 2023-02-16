@@ -1,4 +1,5 @@
 @use "global.scss" as *;
+@use "screens.scss" as *;
 
 .header-top {
   color: $accent-black;
@@ -11,8 +12,17 @@
 
   background-color: $background-white;
 
-  a {
-    cursor: pointer;
+  position: relative;
+
+  @include md {
+    display: flex !important;
+  }
+
+  .btn {
+    display: none;
+    @include md {
+      display: block;
+    }
   }
 
   .play-zone {
@@ -33,7 +43,10 @@
   }
 
   .right {
-    display: flex;
+    display: none;
+    @include md {
+      display: flex;
+    }
     align-items: center;
     justify-content: space-between;
   }
@@ -42,6 +55,7 @@
     flex: 1;
     max-width: 34.68rem;
     font-size: 0.75rem;
+    margin: 0 auto;
 
     .swiper-slide {
       display: flex;
@@ -49,8 +63,24 @@
       align-items: center;
     }
 
-    .icon {
-      margin: 0 auto;
+    .cross {
+      position: absolute;
+      right: 0;
+      top: 18px;
+
+      display: block;
+
+      @include md {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next,
+    .cross {
+      color: $accent-black;
+      fill: $accent-black;
+      cursor: pointer;
     }
   }
 

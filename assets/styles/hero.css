@@ -32,9 +32,20 @@ html {
   align-items: center;
   justify-content: space-between;
   background-color: rgb(248, 248, 248);
+  position: relative;
 }
-.header-top a {
-  cursor: pointer;
+@media (min-width: 900px) {
+  .header-top {
+    display: flex !important;
+  }
+}
+.header-top .btn {
+  display: none;
+}
+@media (min-width: 900px) {
+  .header-top .btn {
+    display: block;
+  }
 }
 .header-top .play-zone {
   font-weight: 700;
@@ -48,22 +59,43 @@ html {
   background-color: #ffffff;
 }
 .header-top .right {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
+}
+@media (min-width: 900px) {
+  .header-top .right {
+    display: flex;
+  }
 }
 .header-top .center {
   flex: 1;
   max-width: 34.68rem;
   font-size: 0.75rem;
+  margin: 0 auto;
 }
 .header-top .center .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header-top .center .icon {
-  margin: 0 auto;
+.header-top .center .cross {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  display: block;
+}
+@media (min-width: 900px) {
+  .header-top .center .cross {
+    display: none;
+  }
+}
+.header-top .center .swiper-button-prev,
+.header-top .center .swiper-button-next,
+.header-top .center .cross {
+  color: #2c2c2c;
+  fill: #2c2c2c;
+  cursor: pointer;
 }
 .header-top .icon-button {
   background-color: transparent;
