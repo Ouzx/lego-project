@@ -55,3 +55,33 @@ const handleNavScroll = () => {
 };
 
 window.addEventListener("scroll", handleNavScroll);
+
+// search toggle
+const searchButton = document.querySelector("#search-button");
+const searchContainer = document.querySelector("#search-container");
+
+const overlay = document.querySelector(".overlay");
+
+const openSearch = () => {
+  if (window.innerWidth > 900) {
+    searchButton.style.display = "none";
+    searchContainer.style.display = "flex";
+    const input = document.querySelector(".search-input");
+    input.focus();
+    overlay.style.display = "block";
+  }
+};
+
+const closeSearch = () => {
+  if (window.innerWidth > 900) {
+    searchButton.style.display = "flex";
+    searchContainer.style.display = "none";
+    overlay.style.display = "none";
+  }
+};
+
+document.addEventListener("click", function (event) {
+  if (event.target === overlay) {
+    closeSearch();
+  }
+});

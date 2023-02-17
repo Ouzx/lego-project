@@ -135,10 +135,13 @@ html {
     margin-left: 0;
   }
 }
-.header .navbar .actions button {
+.header .navbar .actions .btn {
   margin-right: 20px;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
+}
+.header .navbar .actions .search {
   cursor: pointer;
 }
 @media (min-width: 900px) {
@@ -149,6 +152,37 @@ html {
     border-radius: 100%;
     margin-right: 40px;
   }
+}
+.header .navbar .actions .search-container {
+  display: none;
+  z-index: 100;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  width: 300px;
+  height: 2.5rem;
+  padding: 1rem;
+  margin-right: 40px;
+  border-radius: 1.25rem;
+}
+.header .navbar .actions .search-container .search-close {
+  border: 0;
+  padding-top: 4px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header .navbar .actions .search-container .search-input {
+  padding: 0.5rem 1rem 0.5rem 0;
+  border: 0;
+  font-size: 0.875rem;
+  color: #2c2c2c;
+}
+.header .navbar .actions .search-container .search-input:focus-within {
+  outline: none;
+}
+.header .navbar .actions .search-container .search-img {
+  cursor: pointer;
 }
 @media (min-width: 900px) {
   .header .navbar .actions #nav-account {
@@ -178,11 +212,12 @@ header.scroll-down {
 }
 
 .overlay {
+  display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=header.css.map */

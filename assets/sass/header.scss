@@ -125,7 +125,7 @@
 
       @extend %center;
 
-      button {
+      .btn {
         margin-right: 20px;
         border: 0;
         background-color: transparent;
@@ -134,13 +134,52 @@
 
       .search {
         @extend %center;
-
+        cursor: pointer;
         @include md {
           background-color: $white;
           width: 2.5rem;
           height: 2.5rem;
           border-radius: 100%;
           margin-right: 40px;
+        }
+      }
+      .search-container {
+        display: none;
+        z-index: 100;
+        position: relative;
+
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: $white;
+
+        width: 300px;
+        height: 2.5rem;
+        padding: 1rem;
+        margin-right: 40px;
+
+        border-radius: 1.25rem;
+
+        .search-close {
+          border: 0;
+          padding-top: 4px;
+          background-color: transparent;
+          cursor: pointer;
+        }
+        .search-input {
+          padding: 0.5rem 1rem 0.5rem 0;
+          border: 0;
+
+          font-size: 0.875rem;
+          color: $accent-black;
+
+          &:focus-within {
+            outline: none;
+          }
+        }
+
+        .search-img {
+          cursor: pointer;
         }
       }
 
@@ -181,9 +220,10 @@ header.scroll-down {
 }
 
 .overlay {
+  display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
+  z-index: 1;
 }

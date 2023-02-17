@@ -13,9 +13,8 @@
     />
   </head>
   <body>
-    <!-- <div class="overlay" id="page-overlay"></div> -->
-
     <header class="sticky">
+      <div class="overlay"></div>
       <div class="header-top">
         <a href="#" class="btn">
           <button class="play-zone" aria-label="Play Zone" name="Play Zone">
@@ -115,17 +114,39 @@
           </nav>
 
           <div class="actions">
-            <button class="search">
+            <button
+              class="search btn"
+              id="search-button"
+              onclick="openSearch()"
+            >
               <img src="assets/icons/search.svg" alt="search" />
             </button>
-            <button id="nav-account">
+
+            <div id="search-container" class="search-container">
+              <img
+                src="assets/icons/search.svg"
+                alt="search"
+                class="search-img"
+              />
+              <input class="search-input" type="text" placeholder="Search..." />
+              <button class="search-close" onclick="closeSearch()">
+                <img
+                  src="assets/icons/cross.svg"
+                  alt="x"
+                  width="12"
+                  height="12"
+                />
+              </button>
+            </div>
+
+            <button class="btn" id="nav-account">
               <img src="assets/icons/pp.svg" alt="account" />
             </button>
             <div class="user">
-              <button class="favorites">
+              <button class="favorites btn">
                 <img src="assets/icons/favorite.svg" alt="favorite" />
               </button>
-              <button class="cart">
+              <button class="cart btn">
                 <img src="assets/icons/cart.svg" alt="cart" />
                 <span class="cart-content">(0)</span>
               </button>
