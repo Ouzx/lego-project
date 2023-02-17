@@ -174,4 +174,19 @@ html {
   text-decoration: underline;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+header.scroll-up,
+header:focus-within {
+  top: 0;
+}
+
+header.scroll-down {
+  top: -100%;
+}
+
 /*# sourceMappingURL=header.css.map */
