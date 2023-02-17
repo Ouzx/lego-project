@@ -1,6 +1,12 @@
 @use "global.scss" as *;
 @use "screens.scss" as *;
 
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   height: 75px;
   padding: 0 30px;
@@ -23,13 +29,12 @@
 
     nav {
       ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %center;
 
         list-style-type: none;
 
         a {
+          vertical-align: middle;
           text-decoration: none;
           color: $black;
           cursor: pointer;
@@ -44,6 +49,8 @@
         }
 
         .friends {
+          vertical-align: middle;
+
           padding: 5px 20px;
           background-color: $white;
           color: #d0021b;
@@ -59,12 +66,34 @@
     }
 
     .actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @extend %center;
 
       button {
         margin-right: 20px;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .search {
+        @extend %center;
+
+        background-color: $white;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        margin-right: 40px;
+      }
+
+      .user {
+        @extend %center;
+
+        .cart-content {
+          vertical-align: top;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }

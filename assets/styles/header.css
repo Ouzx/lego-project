@@ -24,6 +24,12 @@ html {
   line-height: 1.5;
 }
 
+.header .navbar .actions .user, .header .navbar .actions .search, .header .navbar .actions, .header .navbar nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   height: 75px;
   padding: 0 30px;
@@ -42,12 +48,10 @@ html {
   justify-content: space-between;
 }
 .header .navbar nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   list-style-type: none;
 }
 .header .navbar nav ul a {
+  vertical-align: middle;
   text-decoration: none;
   color: #000000;
   cursor: pointer;
@@ -61,6 +65,7 @@ html {
   border-color: #000000;
 }
 .header .navbar nav ul .friends {
+  vertical-align: middle;
   padding: 5px 20px;
   background-color: #ffffff;
   color: #d0021b;
@@ -71,13 +76,24 @@ html {
   background-color: #000000;
   color: #ffffff;
 }
-.header .navbar .actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .header .navbar .actions button {
   margin-right: 20px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header .navbar .actions .search {
+  background-color: #ffffff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  margin-right: 40px;
+}
+.header .navbar .actions .user .cart-content {
+  vertical-align: top;
+}
+.header .navbar .actions .user .cart-content:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=header.css.map */
