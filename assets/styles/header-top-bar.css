@@ -24,6 +24,10 @@ html {
   line-height: 1.5;
 }
 
+.header-top-container {
+  background-color: rgb(248, 248, 248);
+}
+
 .header-top {
   color: #2c2c2c;
   height: 55px;
@@ -31,8 +35,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(248, 248, 248);
   position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 @media (min-width: 900px) {
   .header-top {

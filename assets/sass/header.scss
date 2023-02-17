@@ -7,17 +7,26 @@
   align-items: center;
 }
 
-.header {
-  height: 50px;
-  padding: 0 20px;
+.header-container {
   background-color: $white;
   border-bottom: 2px solid $main;
 
   @include md {
     border-bottom: 0;
+    background-color: $main;
+  }
+}
+
+.header {
+  height: 50px;
+  padding: 0 20px;
+
+  max-width: 1600px;
+  margin: 0 auto;
+
+  @include md {
     height: 75px;
     padding: 0 30px;
-    background-color: $main;
   }
 
   width: 100%;

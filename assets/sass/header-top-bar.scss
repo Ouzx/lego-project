@@ -1,6 +1,10 @@
 @use "global.scss" as *;
 @use "screens.scss" as *;
 
+.header-top-container {
+  background-color: $background-white;
+}
+
 .header-top {
   color: $accent-black;
   height: 55px;
@@ -10,9 +14,10 @@
   align-items: center;
   justify-content: space-between;
 
-  background-color: $background-white;
-
   position: relative;
+
+  max-width: 1600px;
+  margin: 0 auto;
 
   @include md {
     display: flex !important;
