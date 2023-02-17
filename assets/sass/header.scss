@@ -1,0 +1,71 @@
+@use "global.scss" as *;
+@use "screens.scss" as *;
+
+.header {
+  height: 75px;
+  padding: 0 30px;
+  width: 100%;
+
+  background-color: $main;
+
+  display: flex;
+  align-items: center;
+
+  .logo {
+    margin-right: 50px;
+  }
+
+  .navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          color: $black;
+          cursor: pointer;
+          margin-right: 50px;
+        }
+        li:not(.friends) {
+          font-weight: 500;
+          border-bottom: 3px solid transparent;
+          &:hover {
+            border-color: $black;
+          }
+        }
+
+        .friends {
+          padding: 5px 20px;
+          background-color: $white;
+          color: #d0021b;
+          font-weight: normal;
+
+          border-radius: 4px;
+          &:hover {
+            background-color: $black;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        margin-right: 20px;
+      }
+    }
+  }
+}

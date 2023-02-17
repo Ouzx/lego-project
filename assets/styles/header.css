@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Cera Pro", sans-serif;
+  line-height: 1.5;
+}
+
+.header {
+  height: 75px;
+  padding: 0 30px;
+  width: 100%;
+  background-color: #ffcf00;
+  display: flex;
+  align-items: center;
+}
+.header .logo {
+  margin-right: 50px;
+}
+.header .navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .navbar nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+.header .navbar nav ul a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  margin-right: 50px;
+}
+.header .navbar nav ul li:not(.friends) {
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+.header .navbar nav ul li:not(.friends):hover {
+  border-color: #000000;
+}
+.header .navbar nav ul .friends {
+  padding: 5px 20px;
+  background-color: #ffffff;
+  color: #d0021b;
+  font-weight: normal;
+  border-radius: 4px;
+}
+.header .navbar nav ul .friends:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.header .navbar .actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .navbar .actions button {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=header.css.map */
