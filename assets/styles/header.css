@@ -24,28 +24,82 @@ html {
   line-height: 1.5;
 }
 
-.header .navbar .actions .user, .header .navbar .actions .search, .header .navbar .actions, .header .navbar nav ul {
+.header .navbar .actions .user, .header .navbar .actions .search, .header .navbar .actions, .header .navbar nav ul, .header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .header {
-  height: 75px;
-  padding: 0 30px;
+  height: 50px;
+  padding: 0 20px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #ffcf00;
   width: 100%;
-  background-color: #ffcf00;
   display: flex;
   align-items: center;
 }
+@media (min-width: 900px) {
+  .header {
+    border-bottom: 0;
+    height: 75px;
+    padding: 0 30px;
+    background-color: #ffcf00;
+  }
+}
+@media (min-width: 900px) {
+  .header .menu {
+    display: none;
+  }
+}
+.header .menu .menu-button {
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+  font-size: 10px;
+}
+.header .menu .menu-button .hamburger {
+  margin: 5px 0;
+}
+.header .menu .menu-button .hamburger::after, .header .menu .menu-button .hamburger::before {
+  background-color: #000000;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 2px auto;
+  transition: all 0.3s ease;
+  width: 20px;
+}
 .header .logo {
   margin-right: 50px;
+  width: 40px;
+  height: 40px;
+}
+@media (min-width: 900px) {
+  .header .logo {
+    width: 55px;
+    height: 55px;
+  }
 }
 .header .navbar {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
+}
+.header .navbar nav {
+  display: none;
+}
+@media (min-width: 900px) {
+  .header .navbar nav {
+    display: block;
+  }
 }
 .header .navbar nav ul {
   list-style-type: none;
@@ -76,18 +130,33 @@ html {
   background-color: #000000;
   color: #ffffff;
 }
+.header .navbar .actions {
+  margin-left: auto;
+}
+@media (min-width: 900px) {
+  .header .navbar .actions {
+    margin-left: 0;
+  }
+}
 .header .navbar .actions button {
   margin-right: 20px;
   border: 0;
   background-color: transparent;
   cursor: pointer;
 }
-.header .navbar .actions .search {
-  background-color: #ffffff;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 100%;
-  margin-right: 40px;
+@media (min-width: 900px) {
+  .header .navbar .actions .search {
+    background-color: #ffffff;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    margin-right: 40px;
+  }
+}
+@media (min-width: 900px) {
+  .header .navbar .actions #nav-account {
+    display: none;
+  }
 }
 .header .navbar .actions .user .cart-content {
   vertical-align: top;
