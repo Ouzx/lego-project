@@ -106,26 +106,11 @@
           cursor: pointer;
           margin-right: 50px;
         }
-        li:not(.friends) {
+        li {
           font-weight: 500;
           border-bottom: 3px solid transparent;
           &:hover {
             border-color: $black;
-          }
-        }
-
-        .friends {
-          vertical-align: middle;
-
-          padding: 5px 20px;
-          background-color: $white;
-          color: #d0021b;
-          font-weight: normal;
-
-          border-radius: 4px;
-          &:hover {
-            background-color: $black;
-            color: $white;
           }
         }
       }
@@ -193,4 +178,12 @@ header:focus-within {
 
 header.scroll-down {
   top: -100%;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
 }

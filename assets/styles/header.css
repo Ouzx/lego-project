@@ -120,24 +120,12 @@ html {
   cursor: pointer;
   margin-right: 50px;
 }
-.header .navbar nav ul li:not(.friends) {
+.header .navbar nav ul li {
   font-weight: 500;
   border-bottom: 3px solid transparent;
 }
-.header .navbar nav ul li:not(.friends):hover {
+.header .navbar nav ul li:hover {
   border-color: #000000;
-}
-.header .navbar nav ul .friends {
-  vertical-align: middle;
-  padding: 5px 20px;
-  background-color: #ffffff;
-  color: #d0021b;
-  font-weight: normal;
-  border-radius: 4px;
-}
-.header .navbar nav ul .friends:hover {
-  background-color: #000000;
-  color: #ffffff;
 }
 .header .navbar .actions {
   margin-left: auto;
@@ -187,6 +175,14 @@ header:focus-within {
 
 header.scroll-down {
   top: -100%;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
 }
 
 /*# sourceMappingURL=header.css.map */
