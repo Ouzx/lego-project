@@ -61,10 +61,11 @@ html {
   align-items: center;
   margin: 0 20px 0 0;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 8px;
 }
 .header .menu .menu-button .hamburger {
   margin: 5px 0;
+  transition: transform 0.3s ease 0s;
 }
 .header .menu .menu-button .hamburger::after, .header .menu .menu-button .hamburger::before {
   background-color: #000000;
@@ -75,6 +76,14 @@ html {
   margin: 2px auto;
   transition: all 0.3s ease;
   width: 20px;
+}
+.header .menu .menu-button .hamburger[aria-expanded=true]::before {
+  transform: rotate(-45deg);
+  transform-origin: 14px 4px;
+}
+.header .menu .menu-button .hamburger[aria-expanded=true]::after {
+  transform: rotate(45deg);
+  transform-origin: 9px 0px;
 }
 .header .logo {
   margin-right: 50px;
