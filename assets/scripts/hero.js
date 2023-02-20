@@ -90,17 +90,17 @@ document.addEventListener("click", function (event) {
 const videContainer = document.querySelector(".video-container");
 
 const videoLarge = `<source
-                          src="https://www.lego.com/cdn/cs/set/assets/blt58880508a33aaef8/FRIENDS-202302-Page-Hero-Animated-Large.mp4"
+                          src="assets/videos/hero-large.mp4"
                           type="video/mp4"
                         />`;
 
 const videoMedium = ` <source
-                          src="https://www.lego.com/cdn/cs/set/assets/blt109377085ec521fb/FRIENDS-202302-Page-Hero-Animated-Medium.mp4"
+                          src="assets/videos/hero-medium.mp4"
                           type="video/mp4"
                         />`;
 
 const videoSmall = ` <source
-                          src="https://www.lego.com/cdn/cs/set/assets/blte25bf0c1268f2426/FRIENDS-202302-Page-Hero-Animated-Small.mp4"
+                          src="assets/videos/hero-small.mp4"
                           type="video/mp4"
                         />`;
 
