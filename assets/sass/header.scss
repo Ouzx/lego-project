@@ -18,15 +18,15 @@
 }
 
 .header {
-  height: 50px;
-  padding: 0 20px;
+  height: 3.125rem;
+  padding: 0 1.25rem;
 
-  max-width: 1600px;
+  max-width: 100rem;
   margin: 0 auto;
 
   @include md {
-    height: 75px;
-    padding: 0 30px;
+    height: 4.6875rem;
+    padding: 0 1.875rem;
   }
 
   width: 100%;
@@ -45,12 +45,12 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      margin: 0 20px 0 0;
+      margin: 0 1.25rem 0 0;
       cursor: pointer;
 
-      font-size: 8px;
+      font-size: 0.5rem;
       .hamburger {
-        margin: 5px 0;
+        margin: 0.3125rem 0;
         transition: transform 0.3s ease 0s;
 
         &::after,
@@ -80,15 +80,15 @@
   }
 
   .logo {
-    margin-right: 50px;
-    width: 40px;
-    height: 40px;
+    margin-right: 3.125rem;
+    width: 2.5rem;
+    height: 2.5rem;
     flex-shrink: 0;
     @extend %center;
 
     @include md {
-      width: 55px;
-      height: 55px;
+      width: 3.4375rem;
+      height: 3.4375rem;
     }
   }
 
@@ -113,7 +113,7 @@
           text-decoration: none;
           color: $black;
           cursor: pointer;
-          margin-right: 50px;
+          margin-right: 3.125rem;
         }
         li {
           font-weight: 500;
@@ -135,7 +135,7 @@
       @extend %center;
 
       .btn {
-        margin-right: 20px;
+        margin-right: 1.25rem;
         border: 0;
         background-color: transparent;
         cursor: pointer;
@@ -149,7 +149,7 @@
           width: 2.5rem;
           height: 2.5rem;
           border-radius: 100%;
-          margin-right: 40px;
+          margin-right: 2.5rem;
         }
       }
       .search-container {
@@ -162,16 +162,16 @@
 
         background-color: $white;
 
-        width: 300px;
+        width: 18.75rem;
         height: 2.5rem;
         padding: 1rem;
-        margin-right: 40px;
+        margin-right: 2.5rem;
 
         border-radius: 1.25rem;
 
         .search-close {
           border: 0;
-          padding-top: 4px;
+          padding-top: 0.25rem;
           background-color: transparent;
           cursor: pointer;
         }
@@ -202,8 +202,8 @@
         @extend %center;
         .cart {
           margin-right: 0;
-          font-size: 12px;
-          transform: translateY(5px);
+          font-size: 0.75rem;
+          transform: translateY(0.3125rem);
 
           .cart-content {
             display: block;
@@ -221,7 +221,7 @@
               vertical-align: top;
 
               display: inline-block;
-              padding-top: 2px;
+              padding-top: 0.125rem;
             }
           }
         }
