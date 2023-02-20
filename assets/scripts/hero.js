@@ -152,3 +152,12 @@ const playVideo = () => {
   playPauseButtonContainer.innerHTML = pauseButton;
   video.play();
 };
+
+// categories
+
+fetch("assets/data/categories.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const categories = data;
+    console.log(categories);
+  });
