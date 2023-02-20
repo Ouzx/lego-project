@@ -42,9 +42,9 @@ html {
 }
 
 .header {
-  height: 50px;
-  padding: 0 20px;
-  max-width: 1600px;
+  height: 3.125rem;
+  padding: 0 1.25rem;
+  max-width: 100rem;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -52,8 +52,8 @@ html {
 }
 @media (min-width: 900px) {
   .header {
-    height: 75px;
-    padding: 0 30px;
+    height: 4.6875rem;
+    padding: 0 1.875rem;
   }
 }
 @media (min-width: 900px) {
@@ -68,12 +68,12 @@ html {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 0 20px 0 0;
+  margin: 0 1.25rem 0 0;
   cursor: pointer;
-  font-size: 8px;
+  font-size: 0.5rem;
 }
 .header .menu .menu-button .hamburger {
-  margin: 5px 0;
+  margin: 0.3125rem 0;
   transition: transform 0.3s ease 0s;
 }
 .header .menu .menu-button .hamburger::after, .header .menu .menu-button .hamburger::before {
@@ -95,15 +95,15 @@ html {
   transform-origin: 9px 0px;
 }
 .header .logo {
-  margin-right: 50px;
-  width: 40px;
-  height: 40px;
+  margin-right: 3.125rem;
+  width: 2.5rem;
+  height: 2.5rem;
   flex-shrink: 0;
 }
 @media (min-width: 900px) {
   .header .logo {
-    width: 55px;
-    height: 55px;
+    width: 3.4375rem;
+    height: 3.4375rem;
   }
 }
 .header .navbar {
@@ -128,7 +128,7 @@ html {
   text-decoration: none;
   color: #000000;
   cursor: pointer;
-  margin-right: 50px;
+  margin-right: 3.125rem;
 }
 .header .navbar nav ul li {
   font-weight: 500;
@@ -146,7 +146,7 @@ html {
   }
 }
 .header .navbar .actions .btn {
-  margin-right: 20px;
+  margin-right: 1.25rem;
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -160,7 +160,7 @@ html {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 100%;
-    margin-right: 40px;
+    margin-right: 2.5rem;
   }
 }
 .header .navbar .actions .search-container {
@@ -170,15 +170,15 @@ html {
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
-  width: 300px;
+  width: 18.75rem;
   height: 2.5rem;
   padding: 1rem;
-  margin-right: 40px;
+  margin-right: 2.5rem;
   border-radius: 1.25rem;
 }
 .header .navbar .actions .search-container .search-close {
   border: 0;
-  padding-top: 4px;
+  padding-top: 0.25rem;
   background-color: transparent;
   cursor: pointer;
 }
@@ -201,8 +201,8 @@ html {
 }
 .header .navbar .actions .user .cart {
   margin-right: 0;
-  font-size: 12px;
-  transform: translateY(5px);
+  font-size: 0.75rem;
+  transform: translateY(0.3125rem);
 }
 .header .navbar .actions .user .cart .cart-content {
   display: block;
@@ -217,7 +217,7 @@ html {
   .header .navbar .actions .user .cart .cart-content {
     vertical-align: top;
     display: inline-block;
-    padding-top: 2px;
+    padding-top: 0.125rem;
   }
 }
 

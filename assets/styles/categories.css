@@ -1,11 +1,11 @@
 .hero-categories {
-  max-width: 1280px;
+  max-width: 80rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   text-align: center;
   cursor: pointer;
 }
@@ -28,11 +28,11 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 15px;
-  width: 80px;
-  height: 95px;
+  line-height: 0.9375rem;
+  width: 5rem;
+  height: 5.9375rem;
   margin: 0 0 0.625rem;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@
 }
 .hero-categories button img {
   object-fit: contain;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 .hero-categories button:hover p {
   color: #006db7;
