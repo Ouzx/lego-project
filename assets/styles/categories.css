@@ -9,15 +9,6 @@
   text-align: center;
   cursor: pointer;
 }
-@media (min-width: 600px) {
-  .hero-categories {
-    flex-wrap: nowrap;
-  }
-  .hero-categories button {
-    margin-right: 0.937rem;
-    margin-bottom: 0.625rem;
-  }
-}
 @media (min-width: 900px) {
   .hero-categories {
     padding: 2.5rem 1.25rem;
@@ -49,6 +40,15 @@
 .hero-categories button:hover p {
   color: #006db7;
   text-decoration: underline;
+}
+@media (min-width: 600px) {
+  .hero-categories {
+    flex-wrap: nowrap;
+  }
+  .hero-categories button {
+    margin-right: 0.937rem;
+    margin-bottom: 0.625rem;
+  }
 }
 
 /*# sourceMappingURL=categories.css.map */
