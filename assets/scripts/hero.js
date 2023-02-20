@@ -115,12 +115,7 @@ const setVideo = () => {
   }
   return `<video width="100%" loop muted height="auto" class="hero-video" autoplay>${source}</video>  
         <img
-          src="https://www.lego.com/cdn/cs/set/assets/blta1873a045719e6ec/friends2023-logo-600w.png?format=png&height=60&dpr=1"
-          srcset="
-            https://www.lego.com/cdn/cs/set/assets/blta1873a045719e6ec/friends2023-logo-600w.png?format=png&height=60&dpr=1,
-            https://www.lego.com/cdn/cs/set/assets/blta1873a045719e6ec/friends2023-logo-600w.png?format=png&height=60&dpr=1.5 1.5x,
-            https://www.lego.com/cdn/cs/set/assets/blta1873a045719e6ec/friends2023-logo-600w.png?format=png&height=60&dpr=2   2x
-          "
+          src="assets/images/friends.png"
           width="105"
           height="50"
           class="hero-friends"
