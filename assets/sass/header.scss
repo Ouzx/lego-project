@@ -200,11 +200,29 @@
 
       .user {
         @extend %center;
+        .cart {
+          margin-right: 0;
+          font-size: 12px;
+          transform: translateY(5px);
 
-        .cart-content {
-          vertical-align: top;
+          .cart-content {
+            display: block;
+          }
           &:hover {
-            text-decoration: underline;
+            .cart-content {
+              text-decoration: underline;
+            }
+          }
+
+          @include md {
+            transform: translateY(0);
+
+            .cart-content {
+              vertical-align: top;
+
+              display: inline-block;
+              padding-top: 2px;
+            }
           }
         }
       }

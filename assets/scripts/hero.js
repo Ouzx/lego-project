@@ -174,3 +174,19 @@ fetch("assets/data/categories.json")
       categoriesContainer.innerHTML += itemTemplate(category);
     });
   });
+
+// cart update
+let productsInCart = 2;
+const cartContent = document.querySelector(".cart-content");
+
+// cart paranthese
+const cp = () => {
+  if (window.innerWidth > 900) {
+    cartContent.innerHTML = `(${productsInCart})`;
+  } else {
+    cartContent.innerHTML = productsInCart;
+  }
+};
+
+cp();
+window.addEventListener("resize", cp);

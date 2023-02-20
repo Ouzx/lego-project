@@ -199,11 +199,26 @@ html {
     display: none;
   }
 }
-.header .navbar .actions .user .cart-content {
-  vertical-align: top;
+.header .navbar .actions .user .cart {
+  margin-right: 0;
+  font-size: 12px;
+  transform: translateY(5px);
 }
-.header .navbar .actions .user .cart-content:hover {
+.header .navbar .actions .user .cart .cart-content {
+  display: block;
+}
+.header .navbar .actions .user .cart:hover .cart-content {
   text-decoration: underline;
+}
+@media (min-width: 900px) {
+  .header .navbar .actions .user .cart {
+    transform: translateY(0);
+  }
+  .header .navbar .actions .user .cart .cart-content {
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 2px;
+  }
 }
 
 header {
