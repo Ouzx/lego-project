@@ -103,7 +103,7 @@
     p {
       display: none;
     }
-    @include custom(1200px) {
+    @include lg {
       display: flex;
       align-items: center;
       gap: 0.5rem;
