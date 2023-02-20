@@ -89,30 +89,29 @@ document.addEventListener("click", function (event) {
 // hero
 const videContainer = document.querySelector(".video-container");
 
-const videoLarge = `<source
-                          src="assets/videos/hero-large.mp4"
-                          type="video/mp4"
-                        />`;
+const videoLarge = `<source src="assets/videos/hero-large.mp4" type="video/mp4"/>`;
 
-const videoMedium = ` <source
-                          src="assets/videos/hero-medium.mp4"
-                          type="video/mp4"
-                        />`;
+const videoMedium = ` <source src="assets/videos/hero-medium.mp4" type="video/mp4"/>`;
 
-const videoSmall = ` <source
-                          src="assets/videos/hero-small.mp4"
-                          type="video/mp4"
-                        />`;
+const videoSmall = ` <source src="assets/videos/hero-small.mp4" type="video/mp4"/>`;
 
+let lastSize = "";
 const setVideo = () => {
   let source = "";
+  let size = "";
   if (window.innerWidth > 900) {
     source = videoLarge;
+    size = "l";
   } else if (window.innerWidth > 600) {
     source = videoMedium;
+    size = "m";
   } else {
     source = videoSmall;
+    size = "s";
   }
+
+  if (size === lastSize) return;
+  lastSize = size;
   return `<video width="100%" loop muted height="auto" class="hero-video" autoplay>${source}</video>  
         <img
           src="assets/images/friends.png"
@@ -123,7 +122,9 @@ const setVideo = () => {
 };
 
 const handleWindowResize = () => {
-  videContainer.innerHTML = setVideo();
+  const vid = setVideo();
+  if (vid === undefined) return;
+  videContainer.innerHTML = vid;
 };
 handleWindowResize();
 window.addEventListener("resize", handleWindowResize);
