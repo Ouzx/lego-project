@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Cera Pro", sans-serif;
+  line-height: 1.5;
+}
+
+.hero {
+  max-width: 1600px;
+  display: grid;
+  grid-template-areas: "stack";
+  margin: 0 auto;
+}
+.hero .hero-content {
+  grid-area: stack;
+  max-width: 55%;
+  justify-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 60px 20px 10px;
+  color: #ffffff;
+  text-align: right;
+}
+.hero .hero-content h2 {
+  font-weight: normal;
+  font-size: 18px;
+}
+.hero .hero-content p {
+  font-size: 14px;
+  line-height: 1.75rem;
+}
+@media (min-width: 600px) {
+  .hero .hero-content {
+    padding: 20px 60px 20px 10px;
+  }
+  .hero .hero-content h2 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 900px) {
+  .hero .hero-content {
+    padding: 20px 110px 20px 100px;
+  }
+  .hero .hero-content h2 {
+    font-size: 32px;
+  }
+  .hero .hero-content p {
+    font-size: 18px;
+  }
+  .hero .hero-content .hero-button {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero .hero-content h2 {
+    font-size: 40px;
+  }
+}
+.hero .video-container {
+  grid-area: stack;
+}
+.hero .hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+.hero .hero-buttons .hero-button {
+  border: 0;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: auto;
+}
+@media (min-width: 900px) {
+  .hero .hero-buttons .hero-button {
+    padding: 15px 20px;
+  }
+}
+
+/*# sourceMappingURL=hero.css.map */

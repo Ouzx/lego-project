@@ -1,0 +1,102 @@
+@use "global.scss" as *;
+@use "screens.scss" as *;
+.hero {
+  max-width: 1600px;
+
+  display: grid;
+  grid-template-areas: "stack";
+
+  margin: 0 auto;
+
+  .hero-content {
+    grid-area: stack;
+
+    max-width: 55%;
+    justify-self: flex-end;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 20px 60px 20px 10px;
+
+    color: $white;
+    text-align: right;
+
+    h2 {
+      font-weight: normal;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.75rem;
+    }
+
+    @include sm {
+      padding: 20px 60px 20px 10px;
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    @include md {
+      padding: 20px 110px 20px 100px;
+
+      h2 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 18px;
+      }
+      .hero-button {
+        font-size: 16px;
+      }
+    }
+
+    @include custom(1200px) {
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .video-container {
+    grid-area: stack;
+  }
+
+  .hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 1rem;
+
+    font-size: 14px;
+    .hero-button {
+      border: 0;
+      background-color: $white;
+
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      font-size: 1em;
+      font-weight: 500;
+
+      border-radius: $rounding;
+      cursor: pointer;
+
+      padding: 10px 20px;
+      width: auto;
+
+      @include md {
+        padding: 15px 20px;
+      }
+    }
+  }
+}
