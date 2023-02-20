@@ -114,7 +114,7 @@ const setVideo = () => {
   lastSize = size;
   return `<video width="100%" loop muted height="auto" class="hero-video" autoplay>${source}</video>  
         <img
-          src="assets/images/friends.png"
+          src="assets/images/hero/friends.png"
           width="105"
           height="50"
           class="hero-friends"
@@ -132,11 +132,11 @@ window.addEventListener("resize", handleWindowResize);
 // play / pause video
 
 const playButton = `  <button onclick="playVideo()" class="hero-play">
-          <img src="assets/icons/play.svg" width="40" height="40" alt="" />
+          <img src="assets/icons/hero/play.svg" width="40" height="40" alt="" />
         </button>`;
 
 const pauseButton = `<button onclick="stopVideo()" class="hero-stop">
-          <img src="assets/icons/stop.svg" width="40" height="40" alt="" />
+          <img src="assets/icons/hero/stop.svg" width="40" height="40" alt="" />
         </button>
 `;
 
@@ -168,7 +168,7 @@ const itemTemplate = (category) => {
       </button>`;
 };
 
-fetch("assets/data/categories.json")
+fetch("assets/data/hero-categories.json")
   .then((res) => res.json())
   .then((data) => {
     data.map((category) => {

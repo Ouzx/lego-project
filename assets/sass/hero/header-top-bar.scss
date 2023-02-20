@@ -1,5 +1,5 @@
-@use "global.scss" as *;
-@use "screens.scss" as *;
+@use "../global.scss" as *;
+@use "../screens.scss" as *;
 
 .header-top-container {
   background-color: $background-white;

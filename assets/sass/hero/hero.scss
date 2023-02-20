@@ -1,5 +1,5 @@
-@use "global.scss" as *;
-@use "screens.scss" as *;
+@use "../global.scss" as *;
+@use "../screens.scss" as *;
 .hero {
   max-width: 100rem;
   position: relative;
