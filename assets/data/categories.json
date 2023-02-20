@@ -1,31 +1,31 @@
 [
     {
-        "path": "assets/images/categories/Exclusives.webp",
-        "name": "Exclusive"
-    },
-    {
-        "path": "assets/images/categories/Harry Potter™.webp",
-        "name": "Harry Potter™"
-    },
-    {
-        "path": "assets/images/categories/Ideas.webp",
-        "name": "Ideas"
-    },
-    {
         "path": "assets/images/categories/New.webp",
         "name": "New"
+    },
+    {
+        "path": "assets/images/categories/Exclusives.webp",
+        "name": "Exclusive"
     },
     {
         "path": "assets/images/categories/Offers.webp",
         "name": "Offers"
     },
     {
-        "path": "assets/images/categories/Star Wars™.webp",
-        "name": "Star Wars™"
+        "path": "assets/images/categories/Ideas.webp",
+        "name": "Ideas"
+    },
+    {
+        "path": "assets/images/categories/Harry Potter™.webp",
+        "name": "Harry Potter™"
     },
     {
         "path": "assets/images/categories/Technic.webp",
         "name": "Technic"
+    },
+    {
+        "path": "assets/images/categories/Star Wars™.webp",
+        "name": "Star Wars™"
     },
     {
         "path": "assets/images/categories/VIP.webp",

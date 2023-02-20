@@ -1,11 +1,1 @@
-{
-    "version": 3,
-    "sourceRoot": "",
-    "sources": [
-        "../sass/categories.scss",
-        "../sass/screens.scss"
-    ],
-    "names": [],
-    "mappings": "AAEA;EACE;EAEA;EACA;EACA;EACA;EAEA;EACA;EAEA;EACA;;ACNA;EDNF;IAcI;;EAEA;IACE;IAEA;;;ACPJ;EDZF;IAwBI;;;AAGF;EACE;EACA;EACA;EACA;EAEA;EACA;EACA;EAEA;EACA;EAEA;EAEA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAIA;EACE;EACA",
-    "file": "categories.css"
-}
+{"version":3,"sourceRoot":"","sources":["../sass/categories.scss","../sass/screens.scss"],"names":[],"mappings":"AAEA;EACE;EAEA;EACA;EACA;EACA;EAEA;EACA;EAEA;EACA;;ACNA;EDNF;IAcI;;EAEA;IACE;IAEA;;;ACPJ;EDZF;IAwBI;;;AAGF;EACE;EACA;EACA;EACA;EAEA;EACA;EACA;EAEA;EACA;EAGA;EACA;EAEA;EACA;EACA;EACA;EACA;EAEA;;AAEA;EACE;EACA;;AAIA;EACE;EACA","file":"categories.css"}

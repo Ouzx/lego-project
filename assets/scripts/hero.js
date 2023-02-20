@@ -174,7 +174,8 @@ fetch("assets/data/categories.json")
     data.map((category) => {
       categoriesContainer.innerHTML += itemTemplate(category);
     });
-  });
+  })
+  .catch((err) => console.log(err));
 
 // cart update
 let productsInCart = 2;
