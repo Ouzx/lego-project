@@ -22,3 +22,9 @@ $screen-sizes: (
     @content;
   }
 }
+
+@mixin custom($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
