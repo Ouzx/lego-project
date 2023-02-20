@@ -1,0 +1,52 @@
+.hero-categories {
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+}
+@media (min-width: 600px) {
+  .hero-categories {
+    flex-wrap: nowrap;
+  }
+  .hero-categories button {
+    margin-right: 0.937rem;
+    margin-bottom: 0.625rem;
+  }
+}
+@media (min-width: 900px) {
+  .hero-categories {
+    padding: 2.5rem 1.25rem;
+  }
+}
+.hero-categories button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  width: 80px;
+  height: 95px;
+  margin: 0 0 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 25%;
+  flex-wrap: wrap;
+}
+.hero-categories button img {
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.hero-categories button:hover p {
+  color: #006db7;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=categories.css.map */

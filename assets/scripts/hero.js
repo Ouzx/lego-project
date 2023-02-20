@@ -154,10 +154,23 @@ const playVideo = () => {
 };
 
 // categories
+const categoriesContainer = document.querySelector(".hero-categories");
+const itemTemplate = (category) => {
+  return ` <button>
+        <img
+          src="${category.path}"
+          alt="${category.name}"
+          width="80"
+          height="65"
+        />
+        <p>${category.name}</p>
+      </button>`;
+};
 
 fetch("assets/data/categories.json")
   .then((res) => res.json())
   .then((data) => {
-    const categories = data;
-    console.log(categories);
+    data.map((category) => {
+      categoriesContainer.innerHTML += itemTemplate(category);
+    });
   });
