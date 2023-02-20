@@ -2,11 +2,14 @@
 @use "screens.scss" as *;
 .hero {
   max-width: 1600px;
+  position: relative;
 
   display: grid;
   grid-template-areas: "stack";
 
   margin: 0 auto;
+
+  cursor: pointer;
 
   .hero-content {
     grid-area: stack;
@@ -114,6 +117,29 @@
     @include sm {
       bottom: 0;
       left: 0;
+    }
+  }
+
+  .play-stop-button {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 40px;
+    height: 40px;
+
+    margin: 0.5rem;
+
+    @include md {
+      margin: 1rem;
+    }
+    button {
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
     }
   }
 }

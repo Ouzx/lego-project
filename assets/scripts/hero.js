@@ -132,3 +132,28 @@ const handleWindowResize = () => {
 };
 handleWindowResize();
 window.addEventListener("resize", handleWindowResize);
+
+// play / pause video
+
+const playButton = `  <button onclick="playVideo()" class="hero-play">
+          <img src="assets/icons/play.svg" width="40" height="40" alt="" />
+        </button>`;
+
+const pauseButton = `<button onclick="stopVideo()" class="hero-stop">
+          <img src="assets/icons/stop.svg" width="40" height="40" alt="" />
+        </button>
+`;
+
+const playPauseButtonContainer = document.querySelector(".play-stop-button");
+playPauseButtonContainer.innerHTML = pauseButton;
+const stopVideo = () => {
+  const video = document.querySelector(".hero-video");
+  playPauseButtonContainer.innerHTML = playButton;
+  video.pause();
+};
+
+const playVideo = () => {
+  const video = document.querySelector(".hero-video");
+  playPauseButtonContainer.innerHTML = pauseButton;
+  video.play();
+};
