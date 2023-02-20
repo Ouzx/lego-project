@@ -24,7 +24,11 @@ html {
   line-height: 1.5;
 }
 
-.header .navbar .actions .user, .header .navbar .actions .search, .header .navbar .actions, .header .navbar nav ul, .header .logo {
+.header .navbar .actions .user,
+.header .navbar .actions .search,
+.header .navbar .actions,
+.header .navbar nav ul,
+.header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +80,8 @@ html {
   margin: 0.3125rem 0;
   transition: transform 0.3s ease 0s;
 }
-.header .menu .menu-button .hamburger::after, .header .menu .menu-button .hamburger::before {
+.header .menu .menu-button .hamburger::after,
+.header .menu .menu-button .hamburger::before {
   background-color: #000000;
   border-radius: 2px;
   content: "";
@@ -86,11 +91,11 @@ html {
   transition: all 0.3s ease;
   width: 20px;
 }
-.header .menu .menu-button .hamburger[aria-expanded=true]::before {
+.header .menu .menu-button .hamburger[aria-expanded="true"]::before {
   transform: rotate(-45deg);
   transform-origin: 14px 4px;
 }
-.header .menu .menu-button .hamburger[aria-expanded=true]::after {
+.header .menu .menu-button .hamburger[aria-expanded="true"]::after {
   transform: rotate(45deg);
   transform-origin: 9px 0px;
 }
