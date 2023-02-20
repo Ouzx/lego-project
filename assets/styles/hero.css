@@ -116,6 +116,13 @@ html {
     padding: 0.9375rem 1.25rem;
   }
 }
+.hero .hero-buttons .hero-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.hero .hero-buttons .hero-button:hover img {
+  filter: invert(1);
+}
 .hero .video-container {
   grid-area: stack;
   position: relative;

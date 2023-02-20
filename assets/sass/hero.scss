@@ -110,6 +110,14 @@
       @include md {
         padding: 0.9375rem 1.25rem;
       }
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+        img {
+          filter: invert(1);
+        }
+      }
     }
   }
 
