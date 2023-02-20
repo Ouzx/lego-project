@@ -16,7 +16,7 @@
 
   position: relative;
 
-  max-width: 1600px;
+  max-width: 100rem;
   margin: 0 auto;
 
   @include md {
@@ -31,7 +31,8 @@
   }
 
   .play-zone {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 12px;
 
     background-color: $blue-kids;
 
@@ -96,6 +97,23 @@
     border: 0;
     padding: 0 10px;
     cursor: pointer;
+  }
+
+  .icon-text {
+    p {
+      display: none;
+    }
+    @include custom(1200px) {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      font-size: 12px;
+      font-weight: 500;
+      p {
+        display: block;
+      }
+    }
   }
 
   .icon {
