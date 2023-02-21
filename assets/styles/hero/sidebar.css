@@ -52,7 +52,7 @@
   align-items: center;
   margin-right: 0;
   padding-left: 1.25rem;
-  border-bottom: 2px #ffcf00 solid;
+  border-bottom: 3px #ffcf00 solid;
   height: 3.125rem;
 }
 .menu[aria-expanded=true] .menu-top .menu-button {
@@ -64,16 +64,29 @@
   font-weight: 400;
   display: inline-block;
 }
-.menu[aria-expanded=true] .hamburger {
+.menu[aria-expanded=true] .menu-top .hamburger {
   transform: translate(0, -50%);
 }
-.menu[aria-expanded=true] .hamburger::before {
+.menu[aria-expanded=true] .menu-top .hamburger::before {
   transform: rotate(-45deg);
   transform-origin: 14px 4px;
 }
-.menu[aria-expanded=true] .hamburger::after {
+.menu[aria-expanded=true] .menu-top .hamburger::after {
   transform: rotate(45deg);
   transform-origin: 9px 0px;
+}
+.menu .menu-content .play-zone {
+  font-weight: 600;
+  font-size: 0.75rem;
+  background-color: #abd9ff;
+  border: 0;
+  border-radius: 3px;
+  padding: 0.625rem 0.625rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 24.25rem;
+  display: block;
+  margin: 1rem auto;
 }
 
 /*# sourceMappingURL=sidebar.css.map */

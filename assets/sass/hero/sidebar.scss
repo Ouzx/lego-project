@@ -64,7 +64,7 @@
       margin-right: 0;
       padding-left: 1.25rem;
 
-      border-bottom: 2px $main solid;
+      border-bottom: 3px $main solid;
 
       height: 3.125rem;
 
@@ -78,19 +78,39 @@
         font-weight: 400;
         display: inline-block;
       }
-    }
+      .hamburger {
+        transform: translate(0, -50%);
+      }
 
-    .hamburger {
-      transform: translate(0, -50%);
+      .hamburger::before {
+        transform: rotate(-45deg);
+        transform-origin: 14px 4px;
+      }
+      .hamburger::after {
+        transform: rotate(45deg);
+        transform-origin: 9px 0px;
+      }
     }
+  }
 
-    .hamburger::before {
-      transform: rotate(-45deg);
-      transform-origin: 14px 4px;
-    }
-    .hamburger::after {
-      transform: rotate(45deg);
-      transform-origin: 9px 0px;
+  .menu-content {
+    .play-zone {
+      font-weight: 600;
+      font-size: 0.75rem;
+
+      background-color: $blue-kids;
+
+      border: 0;
+      border-radius: 3px;
+
+      padding: 0.625rem 0.625rem;
+
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+
+      width: 100%;
+      max-width: 24.25rem;
+      display: block;
+      margin: 1rem auto;
     }
   }
 }
