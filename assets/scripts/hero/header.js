@@ -59,3 +59,20 @@ document.addEventListener("click", function (event) {
     closeSearch();
   }
 });
+
+// cart update
+let productsInCart = 2;
+const cartContent = document.querySelector(".cart-content");
+const cartAtTheSideBar = document.querySelector("#cart-content");
+// cart paranthese
+const cartParanthese = () => {
+  if (window.innerWidth > 900) {
+    cartContent.innerHTML = `(${productsInCart})`;
+  } else {
+    cartContent.innerHTML = productsInCart;
+  }
+  cartAtTheSideBar.innerHTML = `(${productsInCart})`;
+};
+
+cartParanthese();
+window.addEventListener("resize", cartParanthese);
