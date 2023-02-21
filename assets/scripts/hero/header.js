@@ -1,14 +1,3 @@
-// Menu Toggle
-const toggleMenu = () => {
-  const hamburgerIcon = document.querySelector(".hamburger");
-  if (hamburgerIcon.ariaExpanded === "true") {
-    hamburgerIcon.ariaExpanded = "false";
-  } else {
-    hamburgerIcon.ariaExpanded = "true";
-  }
-  const menu = document.querySelector(".header-menu");
-};
-
 // Sticky Header
 const nav = document.querySelector("header");
 
@@ -44,7 +33,7 @@ const searchButton = document.querySelector("#search-button");
 const searchContainer = document.querySelector("#search-container");
 
 const overlay = document.querySelector(".overlay");
-
+let searchOpen = false;
 const openSearch = () => {
   if (window.innerWidth > 900) {
     searchButton.style.display = "none";
@@ -52,6 +41,7 @@ const openSearch = () => {
     const input = document.querySelector(".search-input");
     input.focus();
     overlay.style.display = "block";
+    searchOpen = true;
   }
 };
 
@@ -60,11 +50,12 @@ const closeSearch = () => {
     searchButton.style.display = "flex";
     searchContainer.style.display = "none";
     overlay.style.display = "none";
+    searchOpen = false;
   }
 };
 
 document.addEventListener("click", function (event) {
-  if (event.target === overlay) {
+  if (event.target === overlay && searchOpen) {
     closeSearch();
   }
 });
