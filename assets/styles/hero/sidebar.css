@@ -1,0 +1,79 @@
+.menu {
+  position: relative;
+  transition: 0.4s;
+}
+@media (min-width: 900px) {
+  .menu {
+    display: none;
+  }
+}
+.menu .menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 1.25rem;
+}
+.menu .menu-top .menu-text {
+  font-size: 0.5rem;
+}
+.menu .menu-top .menu-button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.menu .menu-top .menu-button .hamburger {
+  margin: 0.3125rem 0;
+  transition: transform 0.3s ease 0s;
+}
+.menu .menu-top .menu-button .hamburger::after, .menu .menu-top .menu-button .hamburger::before {
+  background-color: #000000;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 2px auto;
+  transition: all 0.3s ease;
+  width: 20px;
+}
+.menu[aria-expanded=true] {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 500;
+  transform: translateX(100vw);
+}
+.menu[aria-expanded=true] .menu-top {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
+  padding-left: 1.25rem;
+  border-bottom: 2px #ffcf00 solid;
+  height: 3.125rem;
+}
+.menu[aria-expanded=true] .menu-top .menu-button {
+  padding: 1rem;
+  border-left: 1px solid rgb(224, 224, 224);
+}
+.menu[aria-expanded=true] .menu-top .menu-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  display: inline-block;
+}
+.menu[aria-expanded=true] .hamburger {
+  transform: translate(0, -50%);
+}
+.menu[aria-expanded=true] .hamburger::before {
+  transform: rotate(-45deg);
+  transform-origin: 14px 4px;
+}
+.menu[aria-expanded=true] .hamburger::after {
+  transform: rotate(45deg);
+  transform-origin: 9px 0px;
+}
+
+/*# sourceMappingURL=sidebar.css.map */

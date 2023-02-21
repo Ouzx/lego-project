@@ -1,0 +1,96 @@
+@use "../screens.scss" as *;
+@use "../global.scss" as *;
+
+.menu {
+  position: relative;
+
+  transition: 0.4s;
+
+  @include md {
+    display: none;
+  }
+
+  .menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-right: 1.25rem;
+
+    .menu-text {
+      font-size: 0.5rem;
+    }
+
+    .menu-button {
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+
+      .hamburger {
+        margin: 0.3125rem 0;
+        transition: transform 0.3s ease 0s;
+
+        &::after,
+        &::before {
+          background-color: $black;
+          border-radius: 2px;
+          content: "";
+          display: block;
+          height: 2px;
+          margin: 2px auto;
+          transition: all 0.3s ease;
+          width: 20px;
+        }
+      }
+    }
+  }
+  &[aria-expanded="true"] {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    z-index: 500;
+
+    transform: translateX(100vw);
+
+    .menu-top {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-right: 0;
+      padding-left: 1.25rem;
+
+      border-bottom: 2px $main solid;
+
+      height: 3.125rem;
+
+      .menu-button {
+        padding: 1rem;
+        border-left: 1px solid rgb(224, 224, 224);
+      }
+
+      .menu-text {
+        font-size: 1.3rem;
+        font-weight: 400;
+        display: inline-block;
+      }
+    }
+
+    .hamburger {
+      transform: translate(0, -50%);
+    }
+
+    .hamburger::before {
+      transform: rotate(-45deg);
+      transform-origin: 14px 4px;
+    }
+    .hamburger::after {
+      transform: rotate(45deg);
+      transform-origin: 9px 0px;
+    }
+  }
+}
