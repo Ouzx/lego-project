@@ -136,4 +136,27 @@
   text-underline-offset: 0.3rem !important;
 }
 
+.menu-shop-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem !important;
+}
+.menu-shop-item-container .menu-shop-item {
+  flex: 1;
+  width: auto !important;
+  background-color: rgb(248, 248, 248) !important;
+  border: 0 !important;
+  border-radius: 0.3125rem;
+}
+.menu-shop-item-container .menu-shop-item .see-all-items-shop {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 2px solid rgb(224, 224, 224);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=sidebar.css.map */
