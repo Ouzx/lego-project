@@ -106,7 +106,20 @@
               <button class="menu-button" onclick="toggleMenu()">
                 <div class="hamburger" aria-expanded="false"></div>
               </button>
-              <span class="menu-text">MENU</span>
+              <button
+                class="menu-goback"
+                style="background-color: transparent; border: 0"
+                data-enable-goBack="false"
+                onclick="closeSubMenu()"
+              >
+                <img
+                  src="assets/icons/hero/next.svg"
+                  style="transform: rotateZ(180deg)"
+                  width="10"
+                  class="menu-goback-icon"
+                />
+                <span class="menu-text">MENU</span>
+              </button>
             </div>
             <div class="menu-content" style="display: none">
               <div class="play-button">
@@ -120,39 +133,54 @@
                 </button>
               </div>
               <div class="menu-items">
-                <a href="#" class="menu-item">Home </a>
-                <a href="#" class="menu-item"
-                  >SHOP <img src="assets/icons/hero/next.svg" width="10" />
-                </a>
-                <a href="#" class="menu-item"
-                  >DISCOVER <img src="assets/icons/hero/next.svg" width="10" />
-                </a>
-                <a href="#" class="menu-item"
-                  >HELP
+                <button onclick="closeMenu()" class="menu-item">Home</button>
+
+                <button class="menu-item" onclick="openSubMenu1('shop')">
+                  SHOP <img src="assets/icons/hero/next.svg" width="10" />
+                </button>
+
+                <button
+                  href="#"
+                  class="menu-item"
+                  onclick="openSubMenu1('discover')"
+                >
+                  DISCOVER <img src="assets/icons/hero/next.svg" width="10" />
+                </button>
+
+                <button
+                  href="#"
+                  class="menu-item"
+                  onclick="openSubMenu1('help')"
+                >
+                  HELP
                   <img src="assets/icons/hero/next.svg" width="10" />
-                </a>
+                </button>
+
                 <a href="#" class="menu-item">
                   <div class="icon-item">
                     <img src="assets/icons/hero/pp.svg" width="20" />
                     <span>Account</span>
                   </div>
                 </a>
+
                 <a href="#" class="menu-item">
                   <div class="icon-item">
                     <img src="assets/images/hero/vip.png" width="20" />
                     <span>VIP</span>
                   </div>
                 </a>
+
                 <a href="#" class="menu-item">My Wishlist </a>
                 <a href="#" class="menu-item">
                   <div>My Bag <span id="cart-content"></span></div>
                 </a>
-                <a href="#" class="menu-item">
+
+                <button href="#" class="menu-item">
                   <div class="icon-item">
                     <img src="assets/icons/hero/location.svg" width="15" />
                     <span>United Kingdom</span>
                   </div>
-                </a>
+                </button>
               </div>
             </div>
           </div>

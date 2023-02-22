@@ -44,6 +44,17 @@
         }
       }
     }
+
+    .menu-goback {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        display: none;
+        margin-right: 0.625rem;
+      }
+    }
   }
   &[aria-expanded="true"] {
     position: fixed;
@@ -121,6 +132,10 @@
         align-items: center;
         justify-content: space-between;
 
+        background-color: transparent;
+        border: 0;
+        width: 100%;
+
         padding: 0.75rem 1.25rem;
         border-bottom: 1px solid rgb(224, 224, 224);
         text-decoration: none;
@@ -128,6 +143,8 @@
 
         font-size: 14px;
         font-weight: 500;
+
+        cursor: pointer;
 
         .icon-item {
           display: flex;
@@ -137,6 +154,21 @@
           font-size: 0.75rem;
         }
       }
+    }
+  }
+
+  .sub-menu {
+    .sub {
+      padding-left: 2.5rem !important;
+      font-weight: normal !important;
+      color: $accent-black !important;
+    }
+    .sub-title {
+      text-transform: uppercase;
+      background-color: $blue !important;
+      color: $white !important;
+      text-decoration: underline !important;
+      text-underline-offset: 0.3rem !important;
     }
   }
 }

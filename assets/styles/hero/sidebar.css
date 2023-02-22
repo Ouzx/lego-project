@@ -36,6 +36,15 @@
   transition: all 0.3s ease;
   width: 20px;
 }
+.menu .menu-top .menu-goback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .menu-top .menu-goback img {
+  display: none;
+  margin-right: 0.625rem;
+}
 .menu[aria-expanded=true] {
   position: fixed;
   top: 0;
@@ -97,18 +106,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
   padding: 0.75rem 1.25rem;
   border-bottom: 1px solid rgb(224, 224, 224);
   text-decoration: none;
   color: #000000;
   font-size: 14px;
   font-weight: 500;
+  cursor: pointer;
 }
 .menu .menu-content .menu-items .menu-item .icon-item {
   display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 0.75rem;
+}
+.menu .sub-menu .sub {
+  padding-left: 2.5rem !important;
+  font-weight: normal !important;
+  color: #2c2c2c !important;
+}
+.menu .sub-menu .sub-title {
+  text-transform: uppercase;
+  background-color: #006db7 !important;
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.3rem !important;
 }
 
 /*# sourceMappingURL=sidebar.css.map */
