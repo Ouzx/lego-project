@@ -56,16 +56,15 @@
       }
     }
   }
+
   &[aria-expanded="true"] {
     position: fixed;
     top: 0;
-    left: -100vw;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: $white;
     z-index: 500;
-
-    transform: translateX(100vw);
 
     .menu-top {
       flex-direction: row-reverse;
@@ -127,6 +126,7 @@
       }
     }
     .menu-items {
+      animation: menu-animation 0.3s ease-in-out;
       .menu-item {
         display: flex;
         align-items: center;
@@ -158,6 +158,7 @@
   }
 
   .sub-menu {
+    animation: sub-menu-animation 0.3s ease-in-out !important;
     .sub {
       padding-left: 2.5rem !important;
       font-weight: normal !important;
@@ -194,5 +195,24 @@
       align-items: center;
       justify-content: center;
     }
+  }
+}
+// translate left to right animation
+@keyframes sub-menu-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// translate right to left animation
+@keyframes menu-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

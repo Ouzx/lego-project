@@ -48,12 +48,11 @@
 .menu[aria-expanded=true] {
   position: fixed;
   top: 0;
-  left: -100vw;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
   z-index: 500;
-  transform: translateX(100vw);
 }
 .menu[aria-expanded=true] .menu-top {
   flex-direction: row-reverse;
@@ -102,6 +101,9 @@
   display: block;
   width: 100%;
 }
+.menu .menu-content .menu-items {
+  animation: menu-animation 0.3s ease-in-out;
+}
 .menu .menu-content .menu-items .menu-item {
   display: flex;
   align-items: center;
@@ -122,6 +124,9 @@
   align-items: center;
   gap: 1rem;
   font-size: 0.75rem;
+}
+.menu .sub-menu {
+  animation: sub-menu-animation 0.3s ease-in-out !important;
 }
 .menu .sub-menu .sub {
   padding-left: 2.5rem !important;
@@ -157,6 +162,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes sub-menu-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes menu-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /*# sourceMappingURL=sidebar.css.map */
