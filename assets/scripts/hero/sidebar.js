@@ -18,6 +18,7 @@ const openMenu = () => {
 };
 
 const closeMenu = () => {
+  closeSubMenu();
   menu.ariaExpanded = "false";
   overlay.style.display = "none";
   menuContent.style.display = "none";
