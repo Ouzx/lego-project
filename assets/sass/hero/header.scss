@@ -1,0 +1,215 @@
+@use "../global.scss" as *;
+@use "../screens.scss" as *;
+
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  background-color: $white;
+  border-bottom: 2px solid $main;
+
+  @include md {
+    border-bottom: 0;
+    background-color: $main;
+  }
+}
+
+.header {
+  height: 3.125rem;
+  padding: 0 1.25rem;
+
+  max-width: 100rem;
+  margin: 0 auto;
+
+  @include md {
+    height: 4.6875rem;
+    padding: 0 1.875rem;
+  }
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .logo {
+    margin-right: 3.125rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    @extend %center;
+
+    @include md {
+      width: 3.4375rem;
+      height: 3.4375rem;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+      display: none;
+      @include md {
+        display: block;
+      }
+      ul {
+        @extend %center;
+
+        list-style-type: none;
+
+        a {
+          vertical-align: middle;
+          text-decoration: none;
+          color: $black;
+          cursor: pointer;
+          margin-right: 3.125rem;
+        }
+        li {
+          font-weight: 500;
+          border-bottom: 3px solid transparent;
+          &:hover {
+            border-color: $black;
+          }
+        }
+      }
+    }
+
+    .actions {
+      margin-left: auto;
+
+      @include md {
+        margin-left: 0;
+      }
+
+      @extend %center;
+
+      .btn {
+        margin-right: 1.25rem;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .search {
+        @extend %center;
+        cursor: pointer;
+        @include md {
+          background-color: $white;
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 100%;
+          margin-right: 2.5rem;
+        }
+      }
+      .search-container {
+        display: none;
+        z-index: 100;
+        position: relative;
+
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: $white;
+
+        width: 18.75rem;
+        height: 2.5rem;
+        padding: 1rem;
+        margin-right: 2.5rem;
+
+        border-radius: 1.25rem;
+
+        .search-close {
+          border: 0;
+          padding-top: 0.25rem;
+          background-color: transparent;
+          cursor: pointer;
+        }
+        .search-input {
+          padding: 0.5rem 1rem 0.5rem 0;
+          border: 0;
+
+          font-size: 0.875rem;
+          color: $accent-black;
+
+          &:focus-within {
+            outline: none;
+          }
+        }
+
+        .search-img {
+          cursor: pointer;
+        }
+      }
+
+      #nav-account {
+        @include md {
+          display: none;
+        }
+      }
+
+      .user {
+        @extend %center;
+        .cart {
+          margin-right: 0;
+          font-size: 0.75rem;
+          transform: translateY(0.3125rem);
+
+          .cart-content {
+            display: block;
+          }
+          &:hover {
+            .cart-content {
+              text-decoration: underline;
+            }
+          }
+
+          @include md {
+            transform: translateY(0);
+
+            .cart-content {
+              vertical-align: top;
+
+              display: inline-block;
+              padding-top: 0.125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  // transition: top 500ms ease-in-out;
+  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+header {
+  z-index: 10;
+}
+
+header.scroll-up,
+header:focus-within {
+  top: 0;
+}
+
+header.scroll-down {
+  top: -100%;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}

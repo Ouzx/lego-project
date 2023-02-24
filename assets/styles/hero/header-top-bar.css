@@ -1,0 +1,115 @@
+.header-top-container {
+  background-color: rgb(248, 248, 248);
+}
+
+.header-top {
+  color: #2c2c2c;
+  height: 3.4375rem;
+  padding: 0 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .header-top {
+    display: flex !important;
+  }
+}
+.header-top .btn {
+  display: none;
+}
+@media (min-width: 900px) {
+  .header-top .btn {
+    display: block;
+  }
+}
+.header-top .play-zone {
+  font-weight: 600;
+  font-size: 0.75rem;
+  background-color: #abd9ff;
+  border: 0;
+  border-radius: 3px;
+  padding: 0.25rem 0.625rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.header-top .play-zone:hover {
+  background-color: #ffffff;
+}
+.header-top .center {
+  max-width: 100%;
+  font-size: 0.75rem;
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .header-top .center {
+    max-width: 34.68rem;
+  }
+}
+.header-top .center .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-top .center .cross {
+  position: absolute;
+  right: 0;
+  top: 1.125rem;
+  display: block;
+}
+@media (min-width: 900px) {
+  .header-top .center .cross {
+    display: none;
+  }
+}
+.header-top .center .swiper-button-prev,
+.header-top .center .swiper-button-next {
+  color: #2c2c2c;
+  cursor: pointer;
+}
+.header-top .right {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 900px) {
+  .header-top .right {
+    display: flex;
+  }
+}
+.header-top .icon-button {
+  background-color: transparent;
+  border: 0;
+  padding: 0 0.625rem;
+  cursor: pointer;
+}
+.header-top .icon-text p {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .header-top .icon-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  .header-top .icon-text p {
+    display: block;
+  }
+}
+.header-top .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.seperator-v {
+  height: 1.25rem;
+  width: 1px;
+  margin: 0 0.5rem;
+  background-color: #2c2c2c;
+}
+
+/*# sourceMappingURL=header-top-bar.css.map */

@@ -1,0 +1,218 @@
+@use "../screens.scss" as *;
+@use "../global.scss" as *;
+
+.menu {
+  position: relative;
+
+  transition: 0.4s;
+
+  @include md {
+    display: none;
+  }
+
+  .menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-right: 1.25rem;
+
+    .menu-text {
+      font-size: 0.5rem;
+    }
+
+    .menu-button {
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+
+      .hamburger {
+        margin: 0.3125rem 0;
+        transition: transform 0.3s ease 0s;
+
+        &::after,
+        &::before {
+          background-color: $black;
+          border-radius: 2px;
+          content: "";
+          display: block;
+          height: 2px;
+          margin: 2px auto;
+          transition: all 0.3s ease;
+          width: 20px;
+        }
+      }
+    }
+
+    .menu-goback {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        display: none;
+        margin-right: 0.625rem;
+      }
+    }
+  }
+
+  &[aria-expanded="true"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    z-index: 500;
+
+    .menu-top {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-right: 0;
+      padding-left: 1.25rem;
+
+      border-bottom: 3px $main solid;
+
+      height: 3.125rem;
+      .menu-button {
+        padding: 1rem;
+        border-left: 1px solid rgb(224, 224, 224);
+      }
+
+      .menu-text {
+        font-size: 1.3rem;
+        font-weight: 400;
+        display: inline-block;
+      }
+      .hamburger {
+        transform: translate(0, -50%);
+      }
+
+      .hamburger::before {
+        transform: rotate(-45deg);
+        transform-origin: 14px 4px;
+      }
+      .hamburger::after {
+        transform: rotate(45deg);
+        transform-origin: 9px 0px;
+      }
+    }
+  }
+
+  .menu-content {
+    overflow-y: scroll;
+    max-height: calc(100vh - 3.125rem);
+
+    .play-button {
+      margin: 1rem 1.25rem;
+      .play-zone {
+        font-weight: 600;
+        font-size: 0.75rem;
+
+        background-color: $blue-kids;
+
+        border: 0;
+        border-radius: 3px;
+
+        padding: 0.625rem 0.625rem;
+
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+
+        display: block;
+        width: 100%;
+      }
+    }
+    .menu-items {
+      animation: menu-animation 0.3s ease-in-out;
+      .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: transparent;
+        border: 0;
+        width: 100%;
+
+        padding: 0.75rem 1.25rem;
+        border-bottom: 1px solid rgb(224, 224, 224);
+        text-decoration: none;
+        color: $black;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        cursor: pointer;
+
+        .icon-item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .sub-menu {
+    animation: sub-menu-animation 0.3s ease-in-out !important;
+    .sub {
+      padding-left: 2.5rem !important;
+      font-weight: normal !important;
+      color: $accent-black !important;
+    }
+    .sub-title {
+      text-transform: uppercase;
+      background-color: $blue !important;
+      color: $white !important;
+      text-decoration: underline !important;
+      text-underline-offset: 0.3rem !important;
+    }
+  }
+}
+
+.menu-shop-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem !important;
+  .menu-shop-item {
+    flex: 1;
+    width: auto !important;
+    background-color: rgb(248, 248, 248) !important;
+    border: 0 !important;
+    border-radius: 0.3125rem;
+    .see-all-items-shop {
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      border: 2px solid rgb(224, 224, 224);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+// translate left to right animation
+@keyframes sub-menu-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// translate right to left animation
+@keyframes menu-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

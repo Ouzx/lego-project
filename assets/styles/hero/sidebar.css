@@ -1,0 +1,184 @@
+.menu {
+  position: relative;
+  transition: 0.4s;
+}
+@media (min-width: 900px) {
+  .menu {
+    display: none;
+  }
+}
+.menu .menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 1.25rem;
+}
+.menu .menu-top .menu-text {
+  font-size: 0.5rem;
+}
+.menu .menu-top .menu-button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.menu .menu-top .menu-button .hamburger {
+  margin: 0.3125rem 0;
+  transition: transform 0.3s ease 0s;
+}
+.menu .menu-top .menu-button .hamburger::after, .menu .menu-top .menu-button .hamburger::before {
+  background-color: #000000;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 2px auto;
+  transition: all 0.3s ease;
+  width: 20px;
+}
+.menu .menu-top .menu-goback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .menu-top .menu-goback img {
+  display: none;
+  margin-right: 0.625rem;
+}
+.menu[aria-expanded=true] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 500;
+}
+.menu[aria-expanded=true] .menu-top {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
+  padding-left: 1.25rem;
+  border-bottom: 3px #ffcf00 solid;
+  height: 3.125rem;
+}
+.menu[aria-expanded=true] .menu-top .menu-button {
+  padding: 1rem;
+  border-left: 1px solid rgb(224, 224, 224);
+}
+.menu[aria-expanded=true] .menu-top .menu-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  display: inline-block;
+}
+.menu[aria-expanded=true] .menu-top .hamburger {
+  transform: translate(0, -50%);
+}
+.menu[aria-expanded=true] .menu-top .hamburger::before {
+  transform: rotate(-45deg);
+  transform-origin: 14px 4px;
+}
+.menu[aria-expanded=true] .menu-top .hamburger::after {
+  transform: rotate(45deg);
+  transform-origin: 9px 0px;
+}
+.menu .menu-content {
+  overflow-y: scroll;
+  max-height: calc(100vh - 3.125rem);
+}
+.menu .menu-content .play-button {
+  margin: 1rem 1.25rem;
+}
+.menu .menu-content .play-button .play-zone {
+  font-weight: 600;
+  font-size: 0.75rem;
+  background-color: #abd9ff;
+  border: 0;
+  border-radius: 3px;
+  padding: 0.625rem 0.625rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 100%;
+}
+.menu .menu-content .menu-items {
+  animation: menu-animation 0.3s ease-in-out;
+}
+.menu .menu-content .menu-items .menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.menu .menu-content .menu-items .menu-item .icon-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+}
+.menu .sub-menu {
+  animation: sub-menu-animation 0.3s ease-in-out !important;
+}
+.menu .sub-menu .sub {
+  padding-left: 2.5rem !important;
+  font-weight: normal !important;
+  color: #2c2c2c !important;
+}
+.menu .sub-menu .sub-title {
+  text-transform: uppercase;
+  background-color: #006db7 !important;
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.3rem !important;
+}
+
+.menu-shop-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem !important;
+}
+.menu-shop-item-container .menu-shop-item {
+  flex: 1;
+  width: auto !important;
+  background-color: rgb(248, 248, 248) !important;
+  border: 0 !important;
+  border-radius: 0.3125rem;
+}
+.menu-shop-item-container .menu-shop-item .see-all-items-shop {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 2px solid rgb(224, 224, 224);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes sub-menu-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes menu-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=sidebar.css.map */
