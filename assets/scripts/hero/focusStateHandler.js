@@ -24,4 +24,20 @@ const stateHandler = () => {
   }
 };
 
+const overlayHandler = (event) => {
+  if (event.target === overlay) {
+    if (mobileMenuState) closeMenu();
+    // if (mobileSearchState) closeMobileSearch();
+    if (desktopMenuState) closeDesktopMenu();
+    if (desktopSearchState) closeSearch();
+  }
+};
+
+document.addEventListener("click", function (event) {
+  if (event.target === overlay && desktopSearchState) {
+    closeSearch();
+  }
+});
+
 window.addEventListener("resize", stateHandler);
+window.addEventListener("click", overlayHandler);
