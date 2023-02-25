@@ -195,7 +195,7 @@
 
           <div class="navbar">
             <nav>
-              <ul style="border: 1px solid black">
+              <ul>
                 <button onclick="openDesktopMenu('shop')">
                   <li>SHOP</li>
                 </button>
@@ -208,13 +208,7 @@
               </ul>
 
               <div class="desktop-menu">
-                <div class="dektop-menu-container">
-                  <p>a</p>
-                  <p>b</p>
-                  <p>c</p>
-                  <p>d</p>
-                  <p>e</p>
-                </div>
+                <div class="desktop-menu-container"></div>
                 <button class="desktop-menu-close" onclick="closeDesktopMenu()">
                   <img src="assets/icons/hero/cross.svg" />
                 </button>
@@ -297,6 +291,7 @@
   <script src="assets/scripts/hero/headerTopBar.js"></script>
   <script src="assets/scripts/hero/hero.js"></script>
   <script src="assets/scripts/hero/sidebar.js"></script>
+  <script src="assets/scripts/hero/desktopSidebar.js"></script>
   <script>
     const swiper = new Swiper(".swiper", {
       loop: true,
