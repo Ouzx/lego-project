@@ -1,10 +1,12 @@
+// menu and sub menu 1
 const desktopMenuContainer = document.querySelector(".desktop-menu-container");
 const desktopMenuItems = document.querySelector(".desktop-menu-items");
 let desktopMenuState = false;
 
-const desktopMenuShopButton = document.querySelector("#shop");
-const desktopMenuDiscoverButton = document.querySelector("#discover");
-const desktopMenuHelpButton = document.querySelector("#help");
+// sub menu 2
+const desktopSubMenuTitle = document.querySelector(
+  ".desktop-inner-menu-items > p"
+);
 
 const closeDesktopMenu = () => {
   if (!desktopMenuState) return;
@@ -20,7 +22,7 @@ const openDesktopMenu = async (menuName) => {
 
   menuButtonStateHandler(menuName);
 
-  overlay.style.display = "flex";
+  overlay.style.display = "block";
   desktopMenuContainer.style.display = "block";
 
   const data = await getSiderBarData();
@@ -58,6 +60,10 @@ const handleDesktopMenuResize = () => {
 };
 
 window.addEventListener("resize", handleDesktopMenuResize);
+
+const desktopMenuShopButton = document.querySelector("#shop");
+const desktopMenuDiscoverButton = document.querySelector("#discover");
+const desktopMenuHelpButton = document.querySelector("#help");
 
 const menuButtonStateHandler = (menuName = "") => {
   if (menuName === "shop") {

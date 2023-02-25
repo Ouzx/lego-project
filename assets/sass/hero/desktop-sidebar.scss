@@ -18,34 +18,52 @@
   padding-top: 8.4375rem;
   padding-left: 8.5rem;
 
-  .desktop-menu-items {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1.5rem;
-
+  .desktop-menu-wrapper {
     width: 31.25rem;
 
     @include lg {
       width: 37.8125rem;
     }
 
-    // overflow-y: hidden;
+    display: flex;
 
-    .desktop-menu-item {
-      width: 14.375rem;
-      border: 0;
-      background-color: transparent;
-      font-size: 1rem;
-      font-weight: 400;
-
+    .desktop-menu-items {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
 
-      cursor: pointer;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1.5rem;
+      width: min-content;
+
+      // overflow-y: hidden;
+
+      .desktop-menu-item {
+        width: 14.375rem;
+        border: 0;
+        background-color: transparent;
+        font-size: 1rem;
+        font-weight: 400;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border-bottom: 1px solid transparent;
+
+        cursor: pointer;
+      }
+
+      .desktop-menu-item-active {
+        border-color: $black;
+      }
+    }
+    .desktop-menu-seperator {
+      width: 1px;
+      height: 80vh;
+      background-color: rgb(202, 202, 202);
+      margin-left: 3.125rem;
+      margin-right: 2.5rem;
     }
   }
 }
