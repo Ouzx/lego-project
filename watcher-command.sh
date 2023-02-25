@@ -1,0 +1,1 @@
+sass --watch assets/sass:assets/styles
