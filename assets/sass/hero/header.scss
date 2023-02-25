@@ -44,6 +44,9 @@
     @include md {
       width: 3.4375rem;
       height: 3.4375rem;
+
+      position: relative;
+      z-index: 32;
     }
   }
 
@@ -60,15 +63,19 @@
       }
       ul {
         @extend %center;
+        position: relative;
+        z-index: 31;
 
         list-style-type: none;
 
-        a {
-          vertical-align: middle;
-          text-decoration: none;
+        button {
           color: $black;
           cursor: pointer;
           margin-right: 3.125rem;
+
+          border: 0;
+          background-color: transparent;
+          font: inherit;
         }
         li {
           font-weight: 500;

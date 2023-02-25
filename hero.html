@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/styles/hero/hero.css" />
     <link rel="stylesheet" href="assets/styles/hero/categories.css" />
     <link rel="stylesheet" href="assets/styles/hero/sidebar.css" />
+    <link rel="stylesheet" href="assets/styles/hero/desktop-sidebar.css" />
     <!-- ENd Hero Styles -->
 
     <link rel="stylesheet" href="assets/styles/style.css" />
@@ -194,17 +195,30 @@
 
           <div class="navbar">
             <nav>
-              <ul>
-                <a href="#">
+              <ul style="border: 1px solid black">
+                <button onclick="openDesktopMenu('shop')">
                   <li>SHOP</li>
-                </a>
-                <a href="#">
+                </button>
+                <button onclick="openDesktopMenu('discover')">
                   <li>DISCOVER</li>
-                </a>
-                <a href="#">
+                </button>
+                <button onclick="openDesktopMenu('help')">
                   <li>HELP</li>
-                </a>
+                </button>
               </ul>
+
+              <div class="desktop-menu">
+                <div class="dektop-menu-container">
+                  <p>a</p>
+                  <p>b</p>
+                  <p>c</p>
+                  <p>d</p>
+                  <p>e</p>
+                </div>
+                <button class="desktop-menu-close" onclick="closeDesktopMenu()">
+                  <img src="assets/icons/hero/cross.svg" />
+                </button>
+              </div>
             </nav>
 
             <div class="actions">

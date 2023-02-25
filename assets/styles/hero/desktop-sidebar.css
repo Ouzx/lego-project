@@ -1,0 +1,40 @@
+.desktop-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: #ffffff;
+  z-index: 10;
+}
+@media (min-width: 900px) {
+  .desktop-menu {
+    display: block;
+    width: 40.625rem;
+  }
+}
+@media (min-width: 1200px) {
+  .desktop-menu {
+    width: 47.1875rem;
+  }
+}
+.desktop-menu .desktop-menu-close {
+  position: absolute;
+  top: 2.1875rem;
+  right: 3.125rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dektop-menu-container {
+  position: absolute;
+  top: 8.2rem;
+  left: 8.5rem;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=desktop-sidebar.css.map */

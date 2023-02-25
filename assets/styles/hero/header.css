@@ -41,6 +41,8 @@
   .header .logo {
     width: 3.4375rem;
     height: 3.4375rem;
+    position: relative;
+    z-index: 32;
   }
 }
 .header .navbar {
@@ -58,14 +60,17 @@
   }
 }
 .header .navbar nav ul {
+  position: relative;
+  z-index: 31;
   list-style-type: none;
 }
-.header .navbar nav ul a {
-  vertical-align: middle;
-  text-decoration: none;
+.header .navbar nav ul button {
   color: #000000;
   cursor: pointer;
   margin-right: 3.125rem;
+  border: 0;
+  background-color: transparent;
+  font: inherit;
 }
 .header .navbar nav ul li {
   font-weight: 500;
