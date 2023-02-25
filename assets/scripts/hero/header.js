@@ -17,6 +17,7 @@ const isScrollingDown = () => {
 };
 
 const handleNavScroll = () => {
+  if (desktopSubMenu1State) return;
   if (isScrollingDown() && !nav.contains(document.activeElement)) {
     nav.classList.add("scroll-down");
     nav.classList.remove("scroll-up");
