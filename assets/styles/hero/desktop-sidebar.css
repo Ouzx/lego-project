@@ -1,4 +1,4 @@
-.desktop-menu {
+.desktop-menu-container {
   display: none;
   position: fixed;
   top: 0;
@@ -7,31 +7,8 @@
   min-height: 100vh;
   background-color: #ffffff;
   z-index: 30;
-}
-@media (min-width: 900px) {
-  .desktop-menu {
-    display: block;
-    width: 40.625rem;
-  }
-}
-@media (min-width: 1200px) {
-  .desktop-menu {
-    width: 47.1875rem;
-  }
-}
-.desktop-menu .desktop-menu-close {
-  position: absolute;
-  top: 2.1875rem;
-  right: 3.125rem;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.desktop-menu-container {
-  position: absolute;
-  top: 8.2rem;
-  left: 8.5rem;
+  padding-top: 8.4375rem;
+  padding-left: 8.5rem;
 }
 .desktop-menu-container .desktop-menu-items {
   display: flex;
@@ -39,9 +16,15 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
-  width: 14.375rem;
+  width: 31.25rem;
+}
+@media (min-width: 1200px) {
+  .desktop-menu-container .desktop-menu-items {
+    width: 37.8125rem;
+  }
 }
 .desktop-menu-container .desktop-menu-items .desktop-menu-item {
+  width: 14.375rem;
   border: 0;
   background-color: transparent;
   font-size: 1rem;
@@ -49,7 +32,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  cursor: pointer;
+}
+
+.desktop-menu-close {
+  position: absolute;
+  top: 2.1875rem;
+  right: 3.125rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=desktop-sidebar.css.map */

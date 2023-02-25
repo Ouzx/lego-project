@@ -1,11 +1,13 @@
 @use "../screens.scss" as *;
 @use "../global.scss" as *;
 
-.desktop-menu {
+.desktop-menu-container {
   display: none;
+
   position: fixed;
   top: 0;
   left: 0;
+
   height: 100vh;
   min-height: 100vh;
 
@@ -13,33 +15,13 @@
 
   z-index: 30;
 
-  @include md {
-    display: block;
-    width: 40.625rem;
-  }
+  padding-top: 8.4375rem;
+  padding-left: 8.5rem;
 
-  @include lg {
-    width: 47.1875rem;
-  }
-
-  .desktop-menu-close {
-    position: absolute;
-    top: 2.1875rem;
-    right: 3.125rem;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  //   &[aria-expanded="true"]{
-
+  //   @include md {
+  //     display: block;
   //   }
-}
-.desktop-menu-container {
-  position: absolute;
-  top: 8.2rem;
-  left: 8.5rem;
-  // height: 100%;
+
   .desktop-menu-items {
     display: flex;
     flex-direction: column;
@@ -48,9 +30,16 @@
     align-items: flex-start;
     gap: 1.5rem;
 
-    width: 14.375rem;
+    width: 31.25rem;
+
+    @include lg {
+      width: 37.8125rem;
+    }
+
+    // overflow-y: hidden;
 
     .desktop-menu-item {
+      width: 14.375rem;
       border: 0;
       background-color: transparent;
       font-size: 1rem;
@@ -59,7 +48,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
+
+      cursor: pointer;
     }
   }
+}
+.desktop-menu-close {
+  position: absolute;
+  top: 2.1875rem;
+  right: 3.125rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
