@@ -1,16 +1,18 @@
 const desktopMenuContainer = document.querySelector(".desktop-menu-container");
 const desktopMenuItems = document.querySelector(".desktop-menu-items");
-let desktopSubMenu1State = false;
+let desktopMenuState = false;
 
 const closeDesktopMenu = () => {
+  if (!desktopMenuState) return;
   overlay.style.display = "none";
   desktopMenuContainer.style.display = "none";
-  desktopSubMenu1State = false;
+  desktopMenuState = false;
 };
 
 //desktop sub menu 1
 const openDesktopMenu = async (menuName) => {
-  overlay.style.display = "block";
+  handleDesktopMenuResize();
+  overlay.style.display = "flex";
   desktopMenuContainer.style.display = "block";
 
   const data = await getSiderBarData();
@@ -35,11 +37,8 @@ const openDesktopMenu = async (menuName) => {
 
   desktopMenuItems.innerHTML = /*html*/ `${menuItems.join("")}`;
 
-  desktopSubMenu1State = true;
+  desktopMenuState = true;
 };
-
-// handle desktop menu window resize
-// if window size is greater than 1600px, add left padding to container
 
 const handleDesktopMenuResize = () => {
   const startPadding = 8.5 * 16;

@@ -15,9 +15,11 @@ const openMenu = () => {
   menu.ariaExpanded = "true";
   overlay.style.display = "block";
   menuContent.style.display = "block";
+  mobileMenuState = true;
 };
 
 const closeMenu = () => {
+  if (!mobileMenuState) return;
   closeSubMenu();
   menu.ariaExpanded = "false";
   overlay.style.display = "none";
@@ -30,7 +32,7 @@ const sideMenuContent = document.querySelector(".menu-content").innerHTML;
 const menugoBackButtonIcon = document.querySelector(".menu-goback-icon");
 let sideMenu = document.querySelector(".menu-content");
 
-let subMenu1State = false;
+let mobileMenuState = false;
 const openSubMenu1 = async (menuName) => {
   menugoBackButtonIcon.style.display = "block";
 
@@ -63,18 +65,17 @@ const openSubMenu1 = async (menuName) => {
     </div>
   `;
 
-  subMenu1State = true;
+  mobileMenuState = true;
 };
 
 const closeSubMenu = () => {
-  if (!subMenu1State) return;
+  if (!mobileMenuState) return;
   sideMenu.innerHTML = sideMenuContent;
-  subMenu1State = false;
+  mobileMenuState = false;
   menugoBackButtonIcon.style.display = "none";
 };
 
 // sub menu 2
-let subMenu2State = false;
 const openSubMenu2 = async (menuName, parentName) => {
   const data = await getSiderBarData();
   const menuData = data[parentName][menuName];
@@ -115,7 +116,6 @@ const openSubMenu2 = async (menuName, parentName) => {
       ${menuItems.join("")}
     </>
   `;
-  subMenu2State = true;
 };
 
 const getSiderBarData = async () => {

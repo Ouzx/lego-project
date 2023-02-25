@@ -47,12 +47,11 @@ const openSearch = () => {
 };
 
 const closeSearch = () => {
-  if (window.innerWidth > 900) {
-    searchButton.style.display = "flex";
-    searchContainer.style.display = "none";
-    overlay.style.display = "none";
-    searchOpen = false;
-  }
+  if (!searchOpen) return;
+  searchButton.style.display = "flex";
+  searchContainer.style.display = "none";
+  overlay.style.display = "none";
+  searchOpen = false;
 };
 
 document.addEventListener("click", function (event) {
