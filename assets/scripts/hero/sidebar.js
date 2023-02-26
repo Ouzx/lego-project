@@ -3,6 +3,7 @@ const menu = document.querySelector(".menu");
 const menuButton = document.querySelector(".menu-button");
 const menuContent = document.querySelector(".menu-content");
 
+const body = document.querySelector("body");
 const toggleMenu = () => {
   if (menu.ariaExpanded === "true") {
     closeMenu();
@@ -15,6 +16,7 @@ const openMenu = () => {
   menu.ariaExpanded = "true";
   overlay.style.display = "block";
   menuContent.style.display = "block";
+  body.style.overflow = "hidden";
   mobileMenuState = true;
 };
 
@@ -24,6 +26,7 @@ const closeMenu = () => {
   menu.ariaExpanded = "false";
   overlay.style.display = "none";
   menuContent.style.display = "none";
+  body.style.overflow = "auto";
 };
 
 // sub menu

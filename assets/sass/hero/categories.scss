@@ -9,7 +9,7 @@
   flex-wrap: wrap;
 
   margin: 0 auto;
-  padding: 2.5rem 1.25rem;
+  padding: 1.25rem;
 
   text-align: center;
   cursor: pointer;
@@ -57,11 +57,11 @@
   }
 
   @include sm {
-    flex-wrap: nowrap;
-
+    flex-wrap: wrap;
+    padding: 1.875rem 1.25rem;
     button {
       margin-right: 0.937rem;
-      //   max-width: 0.625rem;
+      max-width: 6.25rem;
       margin-bottom: 0.625rem;
     }
   }
