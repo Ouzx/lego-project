@@ -89,6 +89,7 @@
   }
 }
 .menu .menu-content {
+  overflow-x: hidden;
   overflow-y: auto;
   max-height: calc(100vh - 3.125rem);
 }
