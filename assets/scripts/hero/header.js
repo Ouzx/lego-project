@@ -36,14 +36,12 @@ const searchContainer = document.querySelector("#search-container");
 const overlay = document.querySelector(".overlay");
 let desktopSearchState = false;
 const openSearch = () => {
-  if (window.innerWidth > 900) {
-    searchButton.style.display = "none";
-    searchContainer.style.display = "flex";
-    const input = document.querySelector(".search-input");
-    input.focus();
-    overlay.style.display = "block";
-    desktopSearchState = true;
-  }
+  searchButton.style.display = "none";
+  searchContainer.style.display = "flex";
+  const input = document.querySelector(".search-input");
+  input.focus();
+  overlay.style.display = "block";
+  desktopSearchState = true;
 };
 
 const closeSearch = () => {
