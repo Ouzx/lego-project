@@ -33,13 +33,13 @@ const setVideo = () => {
         />`;
 };
 
-const handleWindowResize = () => {
+const handleHeroWindowResize = () => {
   const vid = setVideo();
   if (vid === undefined) return;
   videContainer.innerHTML = vid;
 };
-handleWindowResize();
-window.addEventListener("resize", handleWindowResize);
+handleHeroWindowResize();
+window.addEventListener("resize", handleHeroWindowResize);
 
 // play / pause video
 

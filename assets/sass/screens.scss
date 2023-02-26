@@ -23,6 +23,12 @@ $screen-sizes: (
   }
 }
 
+@mixin xl {
+  @media (min-width: map-get($screen-sizes, xl)) {
+    @content;
+  }
+}
+
 @mixin custom($size) {
   @media (min-width: $size) {
     @content;

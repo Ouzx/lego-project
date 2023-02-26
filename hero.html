@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="assets/styles/hero/hero.css" />
     <link rel="stylesheet" href="assets/styles/hero/categories.css" />
     <link rel="stylesheet" href="assets/styles/hero/sidebar.css" />
+    <link rel="stylesheet" href="assets/styles/hero/desktop-sidebar.css" />
+    <link rel="stylesheet" href="assets/styles/hero/swiper.css" />
     <!-- ENd Hero Styles -->
 
     <link rel="stylesheet" href="assets/styles/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <header class="sticky">
@@ -37,39 +35,48 @@
 
           <div class="center">
             <div class="swiper">
+              <button
+                onclick="previousSlide()"
+                class="swiper-button"
+                style="left: 0; top: 50%; transform: translateY(-50%)"
+              >
+                <img
+                  src="assets/icons/hero/next.svg"
+                  style="transform: rotateZ(180deg)"
+                />
+              </button>
+
               <div class="swiper-wrapper">
                 <!-- Slides -->
 
-                <span class="swiper-slide">
-                  <span class="slide__text">What's on sale now? &nbsp;</span>
+                <span class="swiper-slide swiper-slide-active">
+                  What's on sale now? &nbsp;
                   <a href="#" class="slide__link">Shop now</a>
                 </span>
 
                 <span class="swiper-slide">
-                  <span class="slide__text">
-                    VIPs: Get Double Points 10/02-16/02 &nbsp;
-                  </span>
+                  VIPs: Get Double Points 10/02-16/02 &nbsp;
                   <a href="#" class="slide__link">Shop now</a>
                 </span>
 
                 <span class="swiper-slide">
-                  <span class="slide__text">
-                    Off-Road Ambulance gift with purchases over £95 &nbsp;
-                  </span>
+                  Off-Road Ambulance gift with purchases over £95 &nbsp;
                   <a href="#" class="slide__link">*Shop now</a>
                 </span>
 
                 <span class="swiper-slide">
-                  <span class="slide__text">
-                    FREE delivery on orders above £50! &nbsp;
-                  </span>
+                  FREE delivery on orders above £50! &nbsp;
                   <a href="#" class="slide__link">*Learn more</a>
                 </span>
               </div>
 
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <button
+                onclick="nextSlide()"
+                class="swiper-button"
+                style="right: 0; top: 50%; transform: translateY(-50%)"
+              >
+                <img src="assets/icons/hero/next.svg" />
+              </button>
             </div>
 
             <button class="icon-button cross">
@@ -195,16 +202,35 @@
           <div class="navbar">
             <nav>
               <ul>
-                <a href="#">
-                  <li>SHOP</li>
-                </a>
-                <a href="#">
-                  <li>DISCOVER</li>
-                </a>
-                <a href="#">
-                  <li>HELP</li>
-                </a>
+                <button onclick="openDesktopMenu('shop')">
+                  <li id="shop">SHOP</li>
+                </button>
+                <button onclick="openDesktopMenu('discover')">
+                  <li id="discover">DISCOVER</li>
+                </button>
+                <button onclick="openDesktopMenu('help')">
+                  <li id="help">HELP</li>
+                </button>
               </ul>
+
+              <div>
+                <div class="desktop-menu-container">
+                  <div class="desktop-menu-wrapper">
+                    <div class="desktop-menu-items"></div>
+                    <div class="desktop-menu-seperator"></div>
+                    <div class="desktop-inner-menu-items">
+                      <p></p>
+                      <div class="desktop-inner-menu-items-container"></div>
+                    </div>
+                  </div>
+                  <button
+                    class="desktop-menu-close"
+                    onclick="closeDesktopMenu()"
+                  >
+                    <img src="assets/icons/hero/cross.svg" />
+                  </button>
+                </div>
+              </div>
             </nav>
 
             <div class="actions">
@@ -277,21 +303,14 @@
     <div class="hero-categories"></div>
   </body>
   <!-- Hero Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="assets/scripts/hero/categories.js"></script>
   <script src="assets/scripts/hero/header.js"></script>
   <script src="assets/scripts/hero/headerTopBar.js"></script>
   <script src="assets/scripts/hero/hero.js"></script>
   <script src="assets/scripts/hero/sidebar.js"></script>
-  <script>
-    const swiper = new Swiper(".swiper", {
-      loop: true,
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+  <script src="assets/scripts/hero/desktopSidebar.js"></script>
+  <script src="assets/scripts/hero/focusStateHandler.js"></script>
+  <script src="assets/scripts/hero/swiper.js"></script>
+
   <!-- End of Hero Scripts -->
 </html>

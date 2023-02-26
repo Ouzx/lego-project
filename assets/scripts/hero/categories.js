@@ -1,6 +1,6 @@
 // categories
 const categoriesContainer = document.querySelector(".hero-categories");
-const itemTemplate = (category) => {
+const categoriesItemTemplate = (category) => {
   return ` <button>
         <img
           src="${category.path}"
@@ -16,7 +16,7 @@ fetch("assets/data/hero-categories.json")
   .then((res) => res.json())
   .then((data) => {
     data.map((category) => {
-      categoriesContainer.innerHTML += itemTemplate(category);
+      categoriesContainer.innerHTML += categoriesItemTemplate(category);
     });
   })
   .catch((err) => console.log(err));

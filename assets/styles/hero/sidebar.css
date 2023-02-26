@@ -83,8 +83,14 @@
   transform: rotate(45deg);
   transform-origin: 9px 0px;
 }
+@media (min-width: 600px) {
+  .menu[aria-expanded=true] {
+    max-width: 23.4375rem;
+  }
+}
 .menu .menu-content {
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
   max-height: calc(100vh - 3.125rem);
 }
 .menu .menu-content .play-button {

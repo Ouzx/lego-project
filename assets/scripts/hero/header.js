@@ -17,6 +17,7 @@ const isScrollingDown = () => {
 };
 
 const handleNavScroll = () => {
+  if (desktopMenuState) return;
   if (isScrollingDown() && !nav.contains(document.activeElement)) {
     nav.classList.add("scroll-down");
     nav.classList.remove("scroll-up");
@@ -33,32 +34,23 @@ const searchButton = document.querySelector("#search-button");
 const searchContainer = document.querySelector("#search-container");
 
 const overlay = document.querySelector(".overlay");
-let searchOpen = false;
+let desktopSearchState = false;
 const openSearch = () => {
-  if (window.innerWidth > 900) {
-    searchButton.style.display = "none";
-    searchContainer.style.display = "flex";
-    const input = document.querySelector(".search-input");
-    input.focus();
-    overlay.style.display = "block";
-    searchOpen = true;
-  }
+  searchButton.style.display = "none";
+  searchContainer.style.display = "flex";
+  const input = document.querySelector(".search-input");
+  input.focus();
+  overlay.style.display = "block";
+  desktopSearchState = true;
 };
 
 const closeSearch = () => {
-  if (window.innerWidth > 900) {
-    searchButton.style.display = "flex";
-    searchContainer.style.display = "none";
-    overlay.style.display = "none";
-    searchOpen = false;
-  }
+  if (!desktopSearchState) return;
+  searchButton.style.display = "flex";
+  searchContainer.style.display = "none";
+  overlay.style.display = "none";
+  desktopSearchState = false;
 };
-
-document.addEventListener("click", function (event) {
-  if (event.target === overlay && searchOpen) {
-    closeSearch();
-  }
-});
 
 // cart update
 let productsInCart = 2;

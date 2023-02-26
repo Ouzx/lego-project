@@ -1,0 +1,154 @@
+@use "../screens.scss" as *;
+@use "../global.scss" as *;
+
+.desktop-menu-container {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  background-color: $white;
+
+  z-index: 30;
+
+  padding-top: 8.4375rem;
+  padding-left: 8.5rem;
+
+  // slide in animation
+  animation: slide-in 0.5s ease-in-out;
+
+  .desktop-menu-wrapper {
+    width: 31.25rem;
+    transition: width 0.5s ease-in-out;
+
+    @include lg {
+      width: 37.8125rem;
+    }
+
+    display: flex;
+
+    &[aria-expanded="true"] {
+      width: 37.5rem;
+
+      @include lg {
+        width: 64.6875rem;
+      }
+
+      .desktop-inner-menu-items-container {
+        display: flex !important;
+      }
+    }
+
+    .desktop-menu-items {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1.5rem;
+      width: min-content;
+
+      // overflow-y: hidden;
+
+      .desktop-menu-item {
+        width: 14.375rem;
+        border: 0;
+        background-color: transparent;
+        font-size: 1rem;
+        font-weight: 400;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        cursor: pointer;
+
+        span {
+          border-bottom: 1px solid transparent;
+        }
+        span:hover {
+          border-color: $black;
+        }
+      }
+
+      .desktop-menu-item-active {
+        span {
+          border-color: $black;
+        }
+      }
+    }
+    .desktop-inner-menu-items {
+      font-size: 14px;
+      .desktop-inner-menu-items-container {
+        display: none;
+        flex-direction: column;
+
+        @include lg {
+          flex-direction: row;
+        }
+
+        gap: 1.5rem;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        margin-top: 1.5rem;
+
+        height: 60vh;
+        padding-bottom: 2.5rem;
+        .desktop-sub-menu-item {
+          width: 14.375rem;
+          border: 0;
+          background-color: transparent;
+
+          font-weight: 400;
+          text-align: start;
+        }
+
+        .desktop-menu-table {
+          display: flex;
+          // gap: rem;
+
+          overflow-y: auto;
+          overflow-x: hidden;
+
+          .desktop-menu-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+          }
+        }
+      }
+    }
+    .desktop-menu-seperator {
+      display: none;
+      width: 1px;
+      height: 80vh;
+      background-color: rgb(202, 202, 202);
+      margin-left: 3.125rem;
+      margin-right: 2.5rem;
+    }
+  }
+}
+.desktop-menu-close {
+  position: absolute;
+  top: 2.1875rem;
+  right: 3.125rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+// animaton: slide in
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

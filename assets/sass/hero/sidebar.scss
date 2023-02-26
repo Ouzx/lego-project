@@ -100,10 +100,15 @@
         transform-origin: 9px 0px;
       }
     }
+
+    @include sm {
+      max-width: 23.4375rem;
+    }
   }
 
   .menu-content {
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
     max-height: calc(100vh - 3.125rem);
 
     .play-button {
