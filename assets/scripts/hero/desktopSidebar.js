@@ -60,6 +60,8 @@ const openDesktopMenu = async (menuName) => {
 
 // desktop sub menu 2
 let subMenuRef = null;
+let desktopSubMenu2Items = [];
+
 const openDesktopSubMenu = async (menuName, parentName, button) => {
   if (!button) return;
   if (button === subMenuRef) {
@@ -79,22 +81,72 @@ const openDesktopSubMenu = async (menuName, parentName, button) => {
 
   const menuData = data[parentName][menuName];
 
-  let menuItems = [];
-
   menuData.map((item, i) => {
     if (item === menuData[menuData.length - 1] && parentName === "shop")
       desktopSubMenuTitle.innerHTML = item;
     else
-      menuItems.push(/*html*/ `
+      desktopSubMenu2Items.push(/*html*/ `
       <button class="desktop-sub-menu-item"> ${item} </button>
     `);
   });
   if (parentName !== "shop") desktopSubMenuTitle.innerHTML = "";
 
-  desktopSubMenuContainer.innerHTML = `${menuItems.join("")}`;
-
+  // desktopSubMenuContainer.innerHTML = `${menuItems.join("")}`;
+  orderDesktopSubMenu();
   desktopMenuWrapper.ariaExpanded = true;
 };
+let isTable = false;
+const orderDesktopSubMenu = () => {
+  const width = window.innerWidth;
+
+  if (width < 1200) {
+    if (!isTable && !desktopSubMenuContainer.innerHTML === "") return;
+    desktopSubMenuContainer.innerHTML = `${desktopSubMenu2Items.join("")}`;
+    isTable = false;
+    return;
+  }
+  if (isTable) return;
+  isTable = true;
+
+  const columnCount = 3;
+  const itemCountPerColumn = 16;
+
+  let column = 0;
+  let item = 0;
+
+  let column1 = "";
+  let column2 = "";
+  let column3 = "";
+
+  for (let i = 0; i < desktopSubMenu2Items.length; i++) {
+    if (item === itemCountPerColumn) {
+      item = 0;
+      column++;
+    }
+
+    if (column === 0) {
+      column1 += desktopSubMenu2Items[i];
+    } else if (column === 1) {
+      column2 += desktopSubMenu2Items[i];
+    } else if (column === 2) {
+      column3 += desktopSubMenu2Items[i];
+    }
+
+    item++;
+  }
+
+  const table = /*html*/ `
+    <div class="desktop-menu-table">
+      <div class="desktop-menu-column ">${column1}</div>
+      <div class="desktop-menu-column ">${column2}</div>
+      <div class="desktop-menu-column ">${column3}</div>
+    </div>
+  `;
+  console.log(table);
+  desktopSubMenuContainer.innerHTML = table;
+};
+
+window.addEventListener("resize", orderDesktopSubMenu);
 
 const closeDesktopSubMenu = () => {
   desktopSubMenuContainer.innerHTML = "";

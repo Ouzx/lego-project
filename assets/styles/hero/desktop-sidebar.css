@@ -73,7 +73,7 @@
   height: 60vh;
   padding-bottom: 2.5rem;
 }
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .desktop-menu-container .desktop-menu-wrapper .desktop-inner-menu-items .desktop-inner-menu-items-container {
     flex-direction: row;
   }
@@ -84,6 +84,16 @@
   background-color: transparent;
   font-weight: 400;
   text-align: start;
+}
+.desktop-menu-container .desktop-menu-wrapper .desktop-inner-menu-items .desktop-inner-menu-items-container .desktop-menu-table {
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.desktop-menu-container .desktop-menu-wrapper .desktop-inner-menu-items .desktop-inner-menu-items-container .desktop-menu-table .desktop-menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .desktop-menu-container .desktop-menu-wrapper .desktop-menu-seperator {
   display: none;

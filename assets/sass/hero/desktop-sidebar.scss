@@ -87,7 +87,7 @@
         display: none;
         flex-direction: column;
 
-        @include xl {
+        @include lg {
           flex-direction: row;
         }
 
@@ -107,6 +107,20 @@
 
           font-weight: 400;
           text-align: start;
+        }
+
+        .desktop-menu-table {
+          display: flex;
+          // gap: rem;
+
+          overflow-y: auto;
+          overflow-x: hidden;
+
+          .desktop-menu-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+          }
         }
       }
     }
