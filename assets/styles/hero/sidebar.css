@@ -89,7 +89,7 @@
   }
 }
 .menu .menu-content {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: calc(100vh - 3.125rem);
 }
 .menu .menu-content .play-button {
