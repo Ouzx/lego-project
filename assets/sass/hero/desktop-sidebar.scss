@@ -18,14 +18,30 @@
   padding-top: 8.4375rem;
   padding-left: 8.5rem;
 
+  // slide in animation
+  animation: slide-in 0.5s ease-in-out;
+
   .desktop-menu-wrapper {
     width: 31.25rem;
+    transition: width 0.5s ease-in-out;
 
     @include lg {
       width: 37.8125rem;
     }
 
     display: flex;
+
+    &[aria-expanded="true"] {
+      width: 37.5rem;
+
+      @include lg {
+        width: 64.6875rem;
+      }
+
+      .desktop-inner-menu-items-container {
+        display: flex !important;
+      }
+    }
 
     .desktop-menu-items {
       display: flex;
@@ -49,16 +65,53 @@
         align-items: center;
         justify-content: space-between;
 
-        border-bottom: 1px solid transparent;
-
         cursor: pointer;
+
+        span {
+          border-bottom: 1px solid transparent;
+        }
+        span:hover {
+          border-color: $black;
+        }
       }
 
       .desktop-menu-item-active {
-        border-color: $black;
+        span {
+          border-color: $black;
+        }
+      }
+    }
+    .desktop-inner-menu-items {
+      font-size: 14px;
+      .desktop-inner-menu-items-container {
+        display: none;
+        flex-direction: column;
+
+        @include xl {
+          flex-direction: row;
+        }
+
+        gap: 1.5rem;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        margin-top: 1.5rem;
+
+        height: 60vh;
+        padding-bottom: 2.5rem;
+        .desktop-sub-menu-item {
+          width: 14.375rem;
+          border: 0;
+          background-color: transparent;
+
+          font-weight: 400;
+          text-align: start;
+        }
       }
     }
     .desktop-menu-seperator {
+      display: none;
       width: 1px;
       height: 80vh;
       background-color: rgb(202, 202, 202);
@@ -74,4 +127,14 @@
   border: 0;
   background-color: transparent;
   cursor: pointer;
+}
+
+// animaton: slide in
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
