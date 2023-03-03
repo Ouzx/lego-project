@@ -71,10 +71,10 @@ const openSubMenu1 = async (menuName) => {
   mobileMenuState = true;
 };
 
-const closeSubMenu = () => {
+const closeSubMenu = (x = true) => {
   if (!mobileMenuState) return;
   sideMenu.innerHTML = sideMenuContent;
-  mobileMenuState = false;
+  if (x) mobileMenuState = false; // silly bug fix :(
   menugoBackButtonIcon.style.display = "none";
 };
 

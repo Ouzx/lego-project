@@ -33,11 +33,5 @@ const overlayHandler = (event) => {
   }
 };
 
-document.addEventListener("click", function (event) {
-  if (event.target === overlay && desktopSearchState) {
-    closeSearch();
-  }
-});
-
 window.addEventListener("resize", stateHandler);
 window.addEventListener("click", overlayHandler);

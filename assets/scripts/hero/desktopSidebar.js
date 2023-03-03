@@ -142,7 +142,6 @@ const orderDesktopSubMenu = () => {
       <div class="desktop-menu-column ">${column3}</div>
     </div>
   `;
-  console.log(table);
   desktopSubMenuContainer.innerHTML = table;
 };
 
