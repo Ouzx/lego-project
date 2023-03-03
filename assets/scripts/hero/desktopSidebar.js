@@ -80,7 +80,8 @@ const openDesktopSubMenu = async (menuName, parentName, button) => {
   const data = await getSiderBarData();
 
   const menuData = data[parentName][menuName];
-
+  desktopSubMenu2Items = [];
+  isTable = false;
   menuData.map((item, i) => {
     if (item === menuData[menuData.length - 1] && parentName === "shop")
       desktopSubMenuTitle.innerHTML = item;
