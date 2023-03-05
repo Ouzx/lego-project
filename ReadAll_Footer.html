@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/ReadAll.css">
+    <link rel="stylesheet" href="assets/styles/official.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Read All About It Section Start-->
+
+    <div class="ReadAll_Section">
+        <div class="ReadAll_Header">
+            <h2 class="ReadAll_head">Read All About It</h2>
+        </div>
+        <div class="ReadAll_Main">
+            <button class="read-all-button" id="read-all-prev-button" onclick="movePrev()" style="left: 10px; " type="submit" aria-label="Previous">
+                <img class="icon" src="assets/images/next.svg" alt="next" width="10" style="transform: rotateZ(180deg)" />
+            </button>
+            <button class="read-all-button" id="read-all-next-button" onclick="moveNext()" style="right: 0;" type="submit" aria-label="Next">
+                <img class="icon" src="assets/images/next.svg" alt="next" width="10" />
+            </button>
+            <div class="ReadAll_Container_Body">
+                <div class="ReadAll_Container_Body_Outer" onscroll="checkScroll()"> 
+        <!-- 1.image -->            
+                    <div class="ReadAll_Container" > 
+                        <a href="#" class="ReadAll_StyleLink">
+                            <div class="ReadAll_Image_Container">
+                                <div class="Lazy_Image_Container">
+                                    <img src="assets/images/42154_Technic_Ford_GT_Card_Content.webp" alt="" class="ReadAll_Image">
+                                </div>
+                            </div> 
+                            <div class="ReadAll_Content">
+                                <h3 class="ReadAll_Content_Title">
+                                    <span>5 of the best LEGO® classic cars and vehicles for adults</span>
+                                </h3>
+                                <p class="ReadAll_Content_BodyText">
+                                    <span>Vroom! As we launch the new Chevrolet Camaro Z28, we thought we’d remind you of some of the best LEGO® classic car sets...</span>
+                                </p> 
+                                <div aria-hidden="true" class="ReadAll_Content_More">
+                                    <span class="ReadMore">Read More </span>
+                                    <button id="next-slide" class="icon-button">
+                                        <img class="icon" src="assets/images/next.svg" fill="currentColor" alt="next" width="8" />
+                                    </button>
+                                
+                                </div>
+                                </p>    
+                            </div>
+                        </a>
+                    </div>
+    <!-- 2.image -->                
+                    <div class="ReadAll_Container" >
+                        <a href="#" class="ReadAll_StyleLink">
+                            <div class="ReadAll_Image_Container">
+                                <div class="Lazy_Image_Container">
+                                    <img src="assets/images/01_Tall_10307_Mobile.webp" alt="" class="ReadAll_Image">
+                                </div>
+                            </div> 
+                            <div class="ReadAll_Content">
+                                <h3 class="ReadAll_Content_Title">
+                                    <span>Top 10 Biggest LEGO® sets ever</span>
+                                </h3>
+                                <p class="ReadAll_Content_BodyText">
+                                    <span>To celebrate the launch of one of our largest LEGO® sets - the LEGO Eiffel tower - we ask what are the other biggest sets in our collection?</span>
+                                </p>
+                                <div aria-hidden="true" class="ReadAll_Content_More">
+                                    <span class="ReadMore">Read More </span>
+                                    <button id="next-slide" class="icon-button">
+                                        <img class="icon" src="assets/images/next.svg" fill="currentColor" alt="next" width="8" />
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+<!-- 3.image -->
+                    <div class="ReadAll_Container"  >
+                        <a href="#" class="ReadAll_StyleLink">
+                            <div class="ReadAll_Image_Container">
+                                <div class="Lazy_Image_Container">
+                                    <img src="assets/images/Hero_Banner_-_Mobile.webp" alt="" class="ReadAll_Image">
+                                </div>
+                            </div> 
+                            <div class="ReadAll_Content">
+                                <h3 class="ReadAll_Content_Title">
+                                    <span>Best Gifts for Gamers</span>
+                                </h3>
+                                <p class="ReadAll_Content_BodyText">
+                                    <span>Looking for gifting inspiration? Discover some unique gifts for gamers, perfect for Holidays, Christmas and birthdays!</span>
+                                </p>
+                                <div aria-hidden="true" class="ReadAll_Content_More">
+                                    <span class="ReadMore">Read More </span>
+                                    <button id="next-slide" class="icon-button">
+                                        <img class="icon" src="assets/images/next.svg" fill="currentColor" alt="next" width="8" />
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+<!-- 4.image -->
+                    <div class="ReadAll_Container" > 
+                        <a href="#" class="ReadAll_StyleLink">
+                            <div class="ReadAll_Image_Container">
+                                <div class="Lazy_Image_Container">
+                                    <img src="assets/images/Wild_Animal_Toys_OG.webp" alt="" class="ReadAll_Image">
+                                </div>
+                            </div> 
+                            <div class="ReadAll_Content">
+                                <h3 class="ReadAll_Content_Title">
+                                    <span>The 14 Best LEGO® Wild Animal Toys For Kids</span>
+                                </h3>
+                                <p class="ReadAll_Content_BodyText">
+                                    <span>If you’ve got a young one who’s wild at heart, make sure playtime lives up to their adventurous spirit with these LEGO® wild animal toys.</span>
+                                </p>
+                                <div aria-hidden="true" class="ReadAll_Content_More">
+                                    <span class="ReadMore">Read More </span>
+                                    <button id="next-slide" class="icon-button">
+                                        <img class="icon" src="assets/images/next.svg" fill="currentColor" alt="next" width="8" />
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Read All About It Section Finish-->
+    
+    <!-- Official Section / Read More Start -->
+
+    <div class="Read_Official">
+        <section class="ReadAll_Content_Official">
+            <div class="ReadAll_Official_Text_Container">
+                <span class="ReadAll_Official_Text_Body">
+                    <span class="Official_Text">Welcome to the Official LEGO® Shop, the awesome home of LEGO building toys,  
+                        <a href="#">gifts</a> , stunning display sets and much more for kids and adults alike! Find the 
+                        <a href="#">Christmas gifts</a>, <a href="#">birthday treats</a> 
+                        and playful sets for children of all ages, from <a href="#">toddlers</a>  to  teens. We make it easy to shop for toys that fit their unique 
+                        <a href="#">interests</a> or find sets that can simply provide hours of fun and imaginative play. Of course, you’ll also find curated
+                        <a href="#">LEGO® sets for adults</a> that explore passions for cars, flowers, travel, entertainment and more! Give the gift of a LEGO® set for 
+                        <a href="#">Valentine’s Day</a> or <a href="#">Lunar New Year</a> – perfect for builders of all ages.
+                        <button class="Official-Read" onclick= "myReadLess();" id="Official-ReadLess">Show Less</button>
+                    </span><button class="Official-Read" onclick = "myReadMore();" id="Official-ReadMore">Read more</button>
+                </span>
+            </div>
+        </section>
+    </div>
+    <!-- official Section End / Read More Start-->
+
+
+    <footer>
+        <div class="Footer-Container">
+            <div class="Footer-Main">
+                <div class="Footer-Logo">
+                    <div class="Footer-Logo-Lego">
+                        <img src="assets/icons/lego-logo.svg" alt="Lego Logo" class="Footer-Lego-Image">
+                        <button class="Region-Selector">
+                            <img src="assets/icons/location4.jpg" alt="location" width="17" height="20">
+                            United Kingdom
+                        </button>
+                    </div>
+
+                    <div class="Footer-Logo-Cards">
+                        <a href="#" class="Gift-Cards">Gift Cards</a>
+                        <a href="#" class="LEGO-Catalogues">LEGO Catalogues</a>
+                        <a href="#" class="Find-Store">Find a LEGO Store</a>
+                    </div>
+                </div>
+
+                <div class="Footer-Email">
+                    <span>SUBSCRIBE TO DIGITAL MARKETING EMAILS</span>
+                    <div class="Footer-Email-Input-Button">
+                        <div class="Footer-Email-Input">
+                            <label class="Footer-Email-Label" type="text" tabindex="-1" for="">
+                                <input type="text" class="Footer-Email-Label-Input" aria-invalid="false" 
+                                aria-disabled="false" value>
+                                <span class="Footer-Email-Label-Text" tabindex="-1">
+                                    Your email address
+                                </span>
+                            <!-- Email validation -->
+                                <img src="assets/icons/validtick.png" alt="valid" class="Valid-Tick" aria-hidden="true" width="20" height="13">
+                                <img src="assets/icons/wrong-icon.jpg" alt="wrong-icon" class="Wrong-Icon" aria-hidden="true" width="17" height="17">
+                                <div class="Validation-Statusbar"></div>
+                                <span class="Email-Input-Error">Please enter a valid email address</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="Footer-Email-Button">
+                            <img src="assets/icons/next.svg" alt="next" width="16" height="16">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="Footer-Dropdowns">
+                    <div class="Footer-Dropdown">
+                        <button class="Dropdown-Button" >
+                            <h4 class="Drop-h4">ABOUT US</h4>
+                            <img class="Dropdown-Image" src="assets/icons/dropdown.svg" alt="dropdown" width="16" height="16">
+                        </button>
+                        <div class="Dropdown-Wrapper">
+                            <ul class="Dropdown-Contents">
+                                <li><a href="#">About the LEGO Group</a></li>
+                                <li><a href="#">LEGO® news</a></li>
+                                <li><a href="#">Sustainability</a></li>
+                                <li><a href="#">Supply chain transparency statement</a></li>
+                                <li><a href="#">LEGO product certification</a></li>
+                                <li><a href="#">LEGO Jobs</a></li>
+                                <li><a href="#">LEGO Compliance Line</a></li>   
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Footer-Dropdown">
+                        <button class="Dropdown-Button">
+                            <h4 class="Drop-h4">SUPPORT</h4>
+                            <img class="Dropdown-Image" src="assets/icons/dropdown.svg" alt="dropdown" width="16" height="16">
+                        </button>
+                        <div class="Dropdown-Wrapper">
+                            <ul class="Dropdown-Contents">
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Find building instructions</a></li>
+                                <li><a href="#">Replacement parts</a></li>
+                                <li><a href="#">Deliveries and returns</a></li>
+                                <li><a href="#">Payment methods</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Product recalls</a></li>   
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Footer-Dropdown">
+                        <button class="Dropdown-Button">
+                            <h4 class="Drop-h4">ATTRACTIONS</h4>
+                            <img class="Dropdown-Image" src="assets/icons/dropdown.svg" alt="dropdown" width="16" height="16">
+                        </button>
+                        <div class="Dropdown-Wrapper">
+                            <ul class="Dropdown-Contents">
+                                <li><a href="#">LEGO® House</a></li>
+                                <li><a href="#">LEGOLAND® Parks</a></li>
+                                <li><a href="#">LEGOLAND Discovery Centers</a></li>  
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Footer-Dropdown">
+                        <button class="Dropdown-Button">
+                            <h4 class="Drop-h4">MORE FROM US</h4>
+                            <img class="Dropdown-Image" src="assets/icons/dropdown.svg" alt="dropdown" width="16" height="16">
+                        </button>
+                        <div class="Dropdown-Wrapper">
+                            <ul class="Dropdown-Contents">
+                                <li><a href="#">LEGO® LIFE</a></li>
+                                <li><a href="#">LEGO Education</a></li>
+                                <li><a href="#">LEGO Ideas</a></li>
+                                <li><a href="#">LEGO Foundation</a></li>
+                                <li><a href="#">Affiliate Program</a></li>
+                                <li><a href="#">Student Offers</a></li>
+                                <li><a href="#">LEGO® Braille Bricks</a></li>   
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="Footer-Container">
+            <div class="Footer-FollowUs">
+                <div class="Footer-Extra">
+                    <h4>FOLLOW US</h4>
+                    <div class="Social-Buttons">
+                        <a href="https://www.facebook.com/LEGO/"><img src="assets/icons/facebook.svg" alt="facebook"></a>
+                        <a href="https://twitter.com/LEGO_Group"><img src="assets/icons/twitter.svg" alt="twitter"></a>
+                        <a href="https://www.instagram.com/lego"><img src="assets/icons/instagram.svg" alt="instagram"></a>
+                        <a href="https://m.youtube.com/user/LEGO"><img src="assets/icons/youtube.svg" alt="youtube"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="Footer-Container">
+            <div class="Footer-Policy">
+                <ul class="Footer-Policy-List">
+                    <li class="Footer-Policy-Item"><a href="#">Privacy Policy</a></li>
+                    <li class="Footer-Policy-Item"><a href="#">Cookies</a></li>
+                    <li class="Footer-Policy-Item"><a href="#">Legal notice</a></li>
+                    <li class="Footer-Policy-Item"><a href="#">Terms of Use</a></li>
+                    <li class="Footer-Policy-Item"><a href="#">Digital wellbeing</a></li>
+                    <li class="Footer-Policy-Item"><a href="#">Accessibility</a></li>
+                    <li class="Footer-Policy-Item"><a href="#">Cookie Settings</a></li>
+                </ul>
+                <p class="Footer-Disclaimer">LEGO System A/S, DK-7190 Billund, Denmark. 
+                    Must be 18 years or older to purchase online. 
+                    LEGO, the LEGO logo, the Minifigure, DUPLO, 
+                    LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS 
+                    and MIXELS are trademarks and copyrights of the LEGO Group. 
+                    ©2022 The LEGO Group. All rights reserved. 
+                    Use of this site signifies your agreement to the Terms of Use.
+                </p>
+            </div>
+        </div>
+    </footer>        
+</body>
+    <script src="assets/scripts/readall.js"></script>
+    <script src="assets/scripts/official.js"></script>
+    <script src="assets/scripts/click_drag_to_Scroll.js"></script>
+    <script src="assets/scripts/footerDropdown.js"></script>
+    <script src="assets/scripts/moveEmail.js"></script>
+    <script src="assets/scripts/inputemail.js"></script>
+</html>
