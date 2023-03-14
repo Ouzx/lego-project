@@ -1,0 +1,339 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+.gmHOWj, .gmHOWj * {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    color: #2c2c2c;
+    background: #fff;
+    font-family: Cera Pro,sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.ReadAll_Section {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 100rem;
+    background-color: transparent;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.ReadAll_Header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 0.9375rem;
+    padding: 1.25rem 1.25rem 0 1.5rem;
+}
+
+.ReadAll_head {
+    font-size: 1.75rem;
+    line-height: 1.9375rem;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(0, 0, 0);
+    text-transform: inherit;
+}
+
+.ReadAll_Main {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+}
+
+button {
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    font: inherit;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+
+
+.ReadAll_Container_Body {
+    width: calc(100% + 2.5rem);
+    overflow: hidden;
+    scroll-behavior: smooth; 
+}
+
+.read-all-button {
+    display: none;
+}
+
+.ReadAll_Container_Body_Outer {
+    
+    position: relative;
+    flex: 1 1 0%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    transition: all 0.5s;
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+
+    &::-webkit-scrollbar {
+        height: 5px;
+        margin: 70px 20px;
+        scroll-behavior: smooth;
+        &:hover {
+            cursor: pointer; 
+        }
+    }
+    
+    &::-webkit-scrollbar-track {
+        
+        background: wheat;
+        margin-inline-end: 30px;
+        scroll-behavior: smooth;
+    }
+    
+    &::-webkit-scrollbar-thumb{
+        background: black;
+        scroll-behavior: smooth;
+    }
+    
+   &.active {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+   }
+   
+    .ReadAll_Container {
+        display: block;
+        box-sizing: content-box;
+        flex-shrink: 0;
+        padding-left: 1.25rem;
+        width: 75%;
+        margin-left: -0.3125rem;
+        color: black;
+        margin-bottom: 30px;
+        scroll-behavior: smooth;
+        scroll-snap-align: start;
+         
+        &:first-child {
+            margin-left: 0px;
+            padding-left: 1.25rem;
+        }
+
+        &:last-child {
+            padding-right: 1.25rem;
+        }
+
+        .ReadAll_StyleLink {
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background-color: transparent;
+
+            &:hover {
+                
+                .ReadMore {
+                    text-decoration: underline;
+                }
+            }
+
+            .ReadAll_Image_Container {
+                position: relative;
+                height: 0px;
+                padding-top: 69.2913%; 
+
+                .Lazy_Image_Container {
+                 
+                    .ReadAll_Image {
+                        border-style: none;
+                        display: inline-block;
+                        vertical-align: middle;
+                        max-width: 100%;
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        inset: 0px;
+                        
+                    }
+                }
+            }
+
+            .ReadAll_Content {
+                display: block;
+                flex-direction: column;
+                flex: 1 1 0%;
+                padding-top: 1.25rem;
+                -webkit-box-align: center;
+                align-items: center;
+
+                .ReadAll_Content_Title {
+                    text-transform: inherit;
+                    margin-top: 0px;
+                    margin-bottom: 0.9375rem;
+                    font-weight: 500;
+                    text-align: center;
+                    width: 100%;
+                    color: rgb(0, 0, 0);
+                    font-size: 1.125rem;
+                    line-height: 1.75rem;
+                    text-align: center;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 0px;
+                    margin-inline-end: 0px;
+                }
+
+                .ReadAll_Content_BodyText {
+                    font-weight: 400;
+                    text-transform: inherit;
+                    text-align: center;
+                    margin-top: 0px;
+                    margin-bottom: 0.9375rem;
+                    width: 100%;
+                    color: rgb(0, 0, 0);
+                    font-size: 0.875rem;
+                    line-height: 1.1875rem;
+                    
+                }
+
+                .ReadAll_Content_More {
+                    text-align: center;
+                    font-weight: bold;
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 601px) {
+
+    .ReadAll_Section {
+        padding: 1.875rem;
+
+    }
+    
+    .ReadAll_head {
+        font-size: 1.5rem;
+        line-height: 2.3125rem;
+    }
+    
+  
+    .ReadAll_Container_Body_Outer .ReadAll_Container {
+        width: 40%;
+        margin-left: -0.3125rem;
+    
+        &:first-child {
+            margin-left: 0px;
+        }
+
+        &:last-child {
+            margin-left: 5px;
+        }
+    }
+    
+    .read-all-button {
+        display: block;
+        position: absolute;
+        top: 20%;
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 2;
+        transition: opacity 750ms ease 0s;
+        padding-top: 5px;
+
+        &:hover {
+            background-color: wheat;
+        }
+
+    }
+}
+
+@media screen and (min-width: 901px) {
+ 
+.ReadAll_Section {
+    padding: 2.5rem 1.25rem;
+    
+} 
+
+.ReadAll_Header {
+    margin-bottom: 1.25rem;
+}
+    
+.ReadAll_head {
+    font-size: 2rem;
+    line-height: 2.6875rem;
+}
+
+.read-all-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 2;
+
+   #read-all-next-button {
+    margin-left: 5px;
+   }
+}
+
+
+}
+
+@media screen and (min-width: 1201px) {
+.ReadAll_Container_Body_Outer {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.ReadAll_Container_Body .ReadAll_Container {
+    width: 23%;
+    margin-left: -0.3125rem;
+}
+
+.read-all-button {
+    display: none;
+ 
+}
+}
