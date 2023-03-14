@@ -1,0 +1,1082 @@
+.ege-big-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ege-big-container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25rem;
+}
+
+.ege-antman-a {
+    width: 100%;
+    height: 100%;
+}
+
+.ege-h2 {
+    font-size: 1.25rem;
+    line-height: 1.9375rem;
+    font-weight: 400;
+    margin-bottom: 0.9375rem;
+}
+
+.ege-small-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.ege-antman-container {
+    position: relative;
+    padding-bottom: 100%;
+    width: 100%;
+    height: 0px;
+}
+
+.ege-antman-banner {
+    color: white;
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+    padding: 1.25rem 1.875rem;
+}
+
+#ege-marvel-big {
+    display: none;
+}
+
+.ege-antman-h2 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+}
+
+.ege-antman-banner-text {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    margin-top: 0.625rem;
+    font-weight: 400;
+}
+
+.ege-antman-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.ege-antman-button {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    margin: 0.9375rem 0.625rem 0 0.625rem;
+    padding: 0.625rem 1.25rem;
+    background: white;
+    border-radius: 4px;
+    align-items: center;
+    display: flex;
+    border: 1px solid transparent;
+    border-collapse: collapse;
+
+    &:hover {
+        color: white;
+        background-color: black;
+    }
+}
+
+.ege-svg-arrow-big {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.75rem;
+}
+
+.ege-svg-arrow-small {
+    width: 8px;
+    height: 13px;
+    margin-left: 0.75rem;
+}
+
+.ege-eiffel-container {
+    position: relative;
+    padding-bottom: 69.3333%;
+    width: 100%;
+    height: 0px;
+}
+
+.ege-eiffel-banner {
+    padding: 1.25rem;
+    background-color: rgb(180, 160, 139);
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.ege-eiffel-h2 {
+    margin-bottom: 0.9375rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+}
+
+.ege-eiffel-banner-text {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    margin-bottom: 1.25rem;
+}
+
+.ege-eiffel-shop-container {
+    display: flex;
+    align-items: center;
+}
+
+.ege-eiffel-shop {
+    line-height: 1.75rem;
+    font-weight: 500;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.ege-eiffel-a {
+    text-decoration: none;
+
+    &:hover {
+        .ege-eiffel-banner .ege-eiffel-shop-container .ege-eiffel-shop {
+            text-decoration: underline;
+        }
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.ege-office-a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        .ege-office-banner .ege-office-shop-container .ege-office-shop {
+            text-decoration: underline;
+        }
+    }
+}
+
+.ege-office-banner {
+    padding: 1.25rem;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ege-office-h2 {
+    margin-bottom: 0.9375rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+}
+
+.ege-office-banner-text {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    margin-bottom: 1.25rem;
+}
+
+.ege-office-shop-container {
+    display: flex;
+    align-items: center;
+}
+
+.ege-office-shop {
+    line-height: 1.75rem;
+    font-weight: 500;
+}
+
+.ege-office-container {
+    position: relative;
+    padding-bottom: 69.3333%;
+    width: 100%;
+    height: 0px;
+}
+
+.ege-big-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.ege-small-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.ege-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    max-width: 9.375rem;
+    max-height: 3.125rem;
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.ege-eiffel-logo-container {
+    position: absolute;
+    bottom: 1.125rem;
+    right: 3%;
+}
+
+.ege-office-logo-container {
+    position: absolute;
+    bottom: 1.125rem;
+    left: 3%;
+}
+
+.ege-antman-logo-container {
+    position: absolute;
+    bottom: 1.125rem;
+    right: 3%;
+}
+
+@media(min-width : 601px) {
+    .ege-big-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .ege-big-container-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 1.875rem 1.25rem;
+    }
+
+    .ege-container-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.25rem;
+    }
+    
+    .ege-antman-a {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ege-h2 {
+        font-size: 1.5rem;
+        line-height: 2.3125rem;
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+    }
+    
+    .ege-small-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+    }
+    
+    .ege-antman-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 100rem;
+        padding-bottom: 0;
+    }
+    
+    .ege-antman-banner {
+        position: absolute;
+        color: white;
+        background-color: transparent;
+        left: 3.75rem;
+        padding: 0;
+        text-align: left;
+        max-width: 45%;
+        margin-top: -5px;
+    }
+
+    #ege-marvel-big {
+        display:block;
+    }
+
+    #ege-marvel-small {
+        display: none;
+    }
+    
+    .ege-antman-h2 {
+        font-size: 1.25rem;
+        line-height: 1.9375rem;
+        font-weight: 400;
+    }
+    
+    .ege-antman-banner-text {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        margin-top: 0.625rem;
+        font-weight: 400;
+    }
+    
+    .ege-antman-button-container {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 -0.625rem;
+    }
+    
+    .ege-antman-button {
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+        margin: 0.9375rem 0.625rem 0 0.625rem;
+        padding: 0.625rem 1.25rem;
+        background: white;
+        border-radius: 4px;
+        align-items: center;
+        display: flex;
+
+        &:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+    
+    .ege-svg-arrow-big {
+        width: 16px;
+        height: 16px;
+        margin-left: 0.75rem;
+    }
+    
+    .ege-svg-arrow-small {
+        width: 8px;
+        height: 13px;
+        margin-left: 0.75rem;
+    }
+    
+    .ege-eiffel-container {
+        position: relative;
+        padding-bottom: 0rem;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ege-eiffel-banner {
+        position: absolute;
+        padding: 1.5625rem 1.25rem;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ege-eiffel-h2 {
+        margin-bottom: 0.9375rem;
+        font-size: 1rem;
+        line-height: 1.5625rem;
+        font-weight: 500;
+    }
+    
+    .ege-eiffel-banner-text {
+        font-size: 0;
+        line-height: 0;
+        margin-bottom: 0;
+    }
+    
+    .ege-eiffel-shop-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .ege-eiffel-shop {
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        font-weight: 500;
+    
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    .ege-eiffel-a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+    
+    .ege-office-a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .ege-office-banner {
+        position: absolute;
+        padding: 1.5625rem 1.25rem;
+        background-color: transparent;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ege-office-h2 {
+        margin-bottom: 0.9375rem;
+        font-size: 1rem;
+        line-height: 1.5625rem;
+        font-weight: 500;
+    }
+    
+    .ege-office-banner-text {
+        font-size: 0;
+        line-height: 0;
+        margin-bottom: 0;
+    }
+    
+    .ege-office-shop-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .ege-office-shop {
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        font-weight: 500;
+    }
+    
+    .ege-office-container {
+        position: relative;
+        padding-bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ege-big-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .ege-small-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .ege-logo-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        max-width: 9.375rem;
+        max-height: 3.125rem;
+        display: inline-block;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+    
+    .ege-eiffel-logo-container {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 3%;
+    }
+    
+    .ege-office-logo-container {
+        position: absolute;
+        gap: 1.125rem;
+        bottom: 1.5rem;
+        left: 3%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .ege-antman-logo-container {
+        display: block;
+        position: static;
+        bottom: 0px;
+        right: 0%;
+        margin-bottom: 0.9375rem;
+    }
+}
+
+@media(min-width : 901px) {
+    .ege-big-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: 0px auto;
+        max-width: 100rem;
+        position: relative;
+    }
+
+    .ege-big-container-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 2.5rem 1.25rem;
+        margin: 0px auto;
+        max-width: 82.5rem;
+    }
+
+    .ege-container-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.25rem;
+    }
+    
+    .ege-antman-a {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ege-h2 {
+        font-size: 1.25rem;
+        line-height: 1.9375rem;
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+    }
+    
+    .ege-small-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+        
+    }
+    
+    .ege-antman-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 0;
+    }
+    
+    .ege-antman-banner {
+        position: absolute;
+        color: white;
+        background-color: transparent;
+        left: 6.875rem;
+        padding: 0;
+        text-align: left;
+        max-width: 35%;
+        margin-top: -5px;
+    }
+
+    #ege-marvel-big {
+        display:block;
+    }
+
+    #ege-marvel-small {
+        display: none;
+    }
+    
+    .ege-antman-h2 {
+        font-size: 2rem;
+        line-height: 2.6875rem;
+        font-weight: 400;
+    }
+    
+    .ege-antman-banner-text {
+        display: block;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-top: 0.9375rem;
+        font-weight: 400;
+    }
+    
+    .ege-antman-button-container {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 -0.625rem;
+    }
+    
+    .ege-antman-button {
+        font-size: 1rem;
+        line-height: 1.5625rem;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+        margin: 1.25rem 0.625rem 0 0.625rem;
+        padding: 0.625rem 0.9375rem;
+        background: white;
+        border-radius: 4px;
+        align-items: center;
+        display: flex;
+
+        &:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+    
+    .ege-svg-arrow-big {
+        width: 16px;
+        height: 16px;
+        margin-left: 0.75rem;
+    }
+    
+    .ege-svg-arrow-small {
+        width: 8px;
+        height: 13px;
+        margin-left: 0.75rem;
+    }
+    
+    .ege-eiffel-container {
+        position: relative;
+        padding-bottom: 0rem;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ege-eiffel-banner {
+        position: absolute;
+        padding: 2.5rem 1.25rem;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ege-eiffel-h2 {
+        margin-bottom: 0.9375rem;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+    }
+    
+    .ege-eiffel-banner-text {
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .ege-eiffel-shop-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .ege-eiffel-shop {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+    
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    .ege-eiffel-a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+            .ege-eiffel-banner .ege-eiffel-shop-container .ege-eiffel-shop {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+    
+    .ege-office-a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .ege-office-banner {
+        position: absolute;
+        padding: 2.5rem 1.25rem;
+        background-color: transparent;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ege-office-h2 {
+        margin-bottom: 0.9375rem;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+    }
+    
+    .ege-office-banner-text {
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .ege-office-shop-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .ege-office-shop {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+    }
+    
+    .ege-office-container {
+        position: relative;
+        padding-bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ege-big-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .ege-small-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .ege-logo-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        max-width: 9.375rem;
+        max-height: 3.125rem;
+        display: inline-block;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+    
+    .ege-eiffel-logo-container {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 3%;
+    }
+    
+    .ege-office-logo-container {
+        position: absolute;
+        gap: 1.125rem;
+        bottom: 1.5rem;
+        left: 3%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .ege-antman-logo-container {
+        display: block;
+        position: static;
+        bottom: 0px;
+        right: 0%;
+        margin-bottom: 0.9375rem;
+    }
+}
+
+@media(min-width : 1201px) {
+    .ege-big-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: 0px auto;
+        max-width: 100rem;
+        position: relative;
+    }
+
+    .ege-big-container-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 2.5rem 1.25rem;
+        margin: 0px auto;
+        max-width: 82.5rem;
+    }
+
+    .ege-container-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.25rem;
+    }
+    
+    .ege-antman-a {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ege-h2 {
+        font-size: 2rem;
+        line-height: 2.6875rem;
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+    }
+    
+    .ege-small-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+        
+    }
+    
+    .ege-antman-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 0;
+    }
+    
+    .ege-antman-banner {
+        position: absolute;
+        color: white;
+        background-color: transparent;
+        left: 6.875rem;
+        padding: 0;
+        text-align: left;
+        max-width: 35%;
+        margin-top: -5px;
+    }
+
+    #ege-marvel-big {
+        display:block;
+    }
+
+    #ege-marvel-small {
+        display: none;
+    }
+    
+    .ege-antman-h2 {
+        font-size: 2.5rem;
+        line-height: 3.125rem;
+        font-weight: 400;
+    }
+    
+    .ege-antman-banner-text {
+        display: block;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-top: 0.9375rem;
+        font-weight: 400;
+    }
+    
+    .ege-antman-button-container {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 -0.625rem;
+    }
+    
+    .ege-antman-button {
+        font-size: 1rem;
+        line-height: 1.5625rem;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+        margin: 1.25rem 0.625rem 0 0.625rem;
+        padding: 0.625rem 0.9375rem;
+        background: white;
+        border-radius: 4px;
+        align-items: center;
+        display: flex;
+
+        &:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+    
+    .ege-svg-arrow-big {
+        width: 16px;
+        height: 16px;
+        margin-left: 0.75rem;
+    }
+    
+    .ege-svg-arrow-small {
+        width: 8px;
+        height: 13px;
+        margin-left: 0.75rem;
+    }
+    
+    .ege-eiffel-container {
+        position: relative;
+        padding-bottom: 0rem;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ege-eiffel-banner {
+        position: absolute;
+        padding: 2.5rem 1.25rem;
+        background-color: transparent;
+        color: black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ege-eiffel-h2 {
+        margin-bottom: 1.25rem;
+        font-size: 1.5rem;
+        line-height: 2.3125rem;
+        font-weight: 500;
+    }
+    
+    .ege-eiffel-banner-text {
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .ege-eiffel-shop-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .ege-eiffel-shop {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+    
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    .ege-eiffel-a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+    
+    .ege-office-a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .ege-office-banner {
+        position: absolute;
+        padding: 2.5rem 1.25rem;
+        background-color: transparent;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ege-office-h2 {
+        margin-bottom: 1.25rem;
+        font-size: 1.5rem;
+        line-height: 2.3125rem;
+        font-weight: 500;
+    }
+    
+    .ege-office-banner-text {
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .ege-office-shop-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .ege-office-shop {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+    }
+    
+    .ege-office-container {
+        position: relative;
+        padding-bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ege-big-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .ege-small-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .ege-logo-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        max-width: 9.375rem;
+        max-height: 3.125rem;
+        display: inline-block;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+    
+    .ege-eiffel-logo-container {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 3%;
+    }
+    
+    .ege-office-logo-container {
+        position: absolute;
+        gap: 1.125rem;
+        bottom: 1.5rem;
+        left: 3%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .ege-antman-logo-container {
+        display: block;
+        position: static;
+        bottom: 0px;
+        right: 0%;
+        margin-bottom: 0.9375rem;
+    }
+}
