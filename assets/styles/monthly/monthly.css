@@ -19,26 +19,26 @@
   font-style: normal;
   font-display: swap;
 }
-.container-mps {
+.container-month {
   font-family: Cera Pro;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container-mps {
+.container-month {
   display: flex;
   padding: 0 65px;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
-.wrapper-mps {
+.wrapper-month {
   max-width: 100%;
   position: relative;
 }
-.wrapper-mps i {
+.wrapper-month i {
   top: 50%;
   position: absolute;
   height: 45px;
@@ -53,68 +53,49 @@
   transform: translateY(-50%);
 }
 
-.wrapper-mps i:first-child {
+.wrapper-month i:first-child {
   left: -60px;
   display: none;
 }
-.wrapper-mps i:last-child {
+.wrapper-month i:last-child {
   right: -60px;
 }
 
-.wrapper-mps .carousel-mps {
+.wrapper-month .carousel-month {
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
   scroll-behavior: smooth;
 }
 
-.carousel-mps.dragging {
+.carousel-month.dragging {
   cursor: grab;
   scroll-behavior: auto;
 }
-.carousel-mps.dragging img {
+.carousel-month.dragging img {
   pointer-events: none;
 }
 
-.img-plus-logo {
+.img-plus-logo-month {
   position: relative;
 }
 
-.img-logo {
-  pointer-events: none;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  justify-content: flex-start;
-  position: absolute;
-  max-height: 3.125rem;
-  min-height: 1.875rem;
-  bottom: 0.7rem;
-  right: 0.625rem;
-  left: 0.625rem;
-}
-.img-logo img {
-  max-width: 32%;
-  max-height: 100%;
-}
-
-.carousel-mps img {
+.carousel-month img {
   width: 100%;
   height: auto;
   object-fit: cover;
   margin-left: 14px;
 }
-.carousel-mps .card-container-mps {
+.carousel-month .card-container-month {
   cursor: pointer;
   display: inline-block;
   vertical-align: top;
   width: 33.3333333333%;
 }
-.carousel-mps .card-container-mps span,
-.carousel-mps .card-container-mps p,
-.carousel-mps .card-container-mps .shop-now,
-.carousel-mps .card-container-mps h3 {
+.carousel-month .card-container-month span,
+.carousel-month .card-container-month p,
+.carousel-month .card-container-month .shop-now-month,
+.carousel-month .card-container-month h3 {
   white-space: normal;
   word-wrap: break-word;
   display: -webkit-box;
@@ -122,44 +103,44 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.carousel-mps .card-container-mps .item-info {
+.carousel-month .card-container-month .item-info-month {
   text-align: center;
 }
-.carousel-mps .card-container-mps .shop-now-div {
+.carousel-month .card-container-month .shop-now-div-month {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.2rem;
 }
 
-.carousel-mps img:first-child {
+.carousel-month img:first-child {
   margin-left: 0px;
 }
 
-.shop-now,
-.most-popular-sets,
+.shop-now-month,
+.just_in_this_month,
 .item-info-first-line {
   font-weight: 500;
 }
 
-.card-container-mps:hover .shop-now {
+.card-container-month:hover .shop-now-month {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 900px) {
-  .carousel-mps .card-container-mps {
+  .carousel-month .card-container-month {
     width: 43.4782608696%;
   }
 }
 @media screen and (max-width: 600px) {
-  .carousel-mps .card-container-mps {
+  .carousel-month .card-container-month {
     width: 76.9230769231%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .carousel-mps .card-container-mps {
+  .carousel-month .card-container-month {
     width: 20rem;
   }
 }
 
-/*# sourceMappingURL=most_popular_sets_2.css.map */
+/*# sourceMappingURL=monthly.css.map */
