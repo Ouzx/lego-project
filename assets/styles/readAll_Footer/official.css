@@ -4,8 +4,7 @@
   margin: 20px;
   background-color: rgb(248, 248, 248);
   text-align: center;
-  -moz-column-width: 1000px;
-       column-width: 1000px;
+  column-width: 1000px;
 }
 .ReadAll_Official_Text_Body .Official_Text {
   -webkit-box-orient: vertical;
@@ -30,7 +29,6 @@
 }
 .ReadAll_Official_Text_Body #Official-ReadMore {
   display: inline-block;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   max-height: 20px;
   position: relative;
@@ -40,4 +38,6 @@
 }
 .ReadAll_Official_Text_Body #Official-ReadLess {
   text-decoration: underline;
-}/*# sourceMappingURL=official.css.map */
+}
+
+/*# sourceMappingURL=official.css.map */

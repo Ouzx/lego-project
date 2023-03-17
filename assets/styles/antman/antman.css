@@ -202,28 +202,24 @@ a:hover {
 .ege-big-img {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .ege-small-img {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .ege-logo-img {
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   max-width: 9.375rem;
   max-height: 3.125rem;
   display: inline-block;
   vertical-align: middle;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .ege-eiffel-logo-container {
@@ -439,26 +435,22 @@ a:hover {
   .ege-big-img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .ege-small-img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .ege-logo-img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     max-width: 9.375rem;
     max-height: 3.125rem;
     display: inline-block;
     vertical-align: middle;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .ege-eiffel-logo-container {
     position: absolute;
@@ -683,26 +675,22 @@ a:hover {
   .ege-big-img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .ege-small-img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .ege-logo-img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     max-width: 9.375rem;
     max-height: 3.125rem;
     display: inline-block;
     vertical-align: middle;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .ege-eiffel-logo-container {
     position: absolute;
@@ -924,26 +912,22 @@ a:hover {
   .ege-big-img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .ege-small-img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .ege-logo-img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     max-width: 9.375rem;
     max-height: 3.125rem;
     display: inline-block;
     vertical-align: middle;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .ege-eiffel-logo-container {
     position: absolute;
@@ -965,4 +949,6 @@ a:hover {
     right: 0%;
     margin-bottom: 0.9375rem;
   }
-}/*# sourceMappingURL=antman.css.map */
+}
+
+/*# sourceMappingURL=antman.css.map */

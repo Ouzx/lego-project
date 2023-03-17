@@ -1,0 +1,334 @@
+@font-face {
+  font-family: Cera Pro;
+  src: url(https://web.archive.org/web/20230219185707im_/https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Bold.woff2);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Cera Pro;
+  src: url(https://web.archive.org/web/20230219185707im_/https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Medium.woff2);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Cera Pro;
+  src: url(https://web.archive.org/web/20230219185707im_/https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: inherit;
+}
+
+.ihArgf {
+  background-color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 1201px) {
+  .ihArgf {
+    max-width: 100rem;
+    margin: 0px auto;
+  }
+}
+
+.gZbRsk {
+  margin-bottom: 1.875rem;
+}
+
+main {
+  display: block;
+}
+
+:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.dHuDgg {
+  width: 100%;
+  min-height: calc(85vh - 3.69rem);
+}
+
+@media screen and (min-width: 901px) {
+  .dHuDgg {
+    min-height: calc(85vh - 4.24rem);
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  color: #2c2c2c;
+  background: #fff;
+}
+
+html:not([lang="ko"]):not([lang="zh"]):not([lang="ja"]) > body {
+  font-family: Cera Pro, sans-serif;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  min-height: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gALCxd {
+  padding: 0px;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+.cCcKqv {
+  max-width: 100rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  background-color: transparent;
+  color: #006db7;
+  text-decoration: none;
+}
+
+.ecHNys {
+  cursor: pointer;
+}
+
+.diVpyn {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.bdYIww {
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  background-color: rgb(42 181 78);
+  text-align: center;
+  padding: 1.25rem 1.875rem;
+}
+
+@media screen and (min-width: 601px) {
+  .bdYIww {
+    position: absolute;
+    max-width: 45%;
+    padding: 0px;
+    background-color: transparent;
+    text-align: right;
+    right: 3.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .bdYIww {
+    right: 6.875rem;
+    max-width: 35%;
+  }
+}
+
+.fgFLx {
+  position: relative;
+  height: 0px;
+  padding-top: 44%;
+}
+
+@media screen and (min-width: 601px) {
+  .fgFLx {
+    padding-top: 20%;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .fgFLx {
+    padding-top: 12.5%;
+  }
+}
+
+.gpWGjH {
+  color: inherit;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  font-weight: 400;
+  text-transform: inherit;
+}
+
+.iXddVz {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  margin-top: 0.625rem;
+}
+
+@media screen and (min-width: 901px) {
+  .iXddVz {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-top: 0.9375rem;
+  }
+}
+
+.cxQvHu {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 0px -0.625rem;
+}
+
+@media screen and (min-width: 601px) {
+  .cxQvHu {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+.xLDzr {
+  display: inline-block;
+  vertical-align: middle;
+  transition: opacity 0.3s ease-in 0s;
+  opacity: 1;
+  position: absolute;
+  inset: 0px;
+}
+
+.igeTxE {
+  display: none;
+}
+
+@media screen and (min-width: 601px) {
+  .igeTxE {
+    display: block;
+  }
+}
+
+.hHKVIf {
+  display: inline-block;
+  width: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-collapse: collapse;
+  text-align: center;
+  border-color: transparent;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.5625rem;
+  font-weight: 500;
+  text-transform: none;
+  padding: 0.625rem 1.125rem;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.fkNUGS {
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  margin-top: 0.9375rem;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  pointer-events: all;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+}
+
+@media screen and (min-width: 901px) {
+  .fkNUGS {
+    font-size: 1rem;
+    line-height: 1.5625rem;
+    margin-top: 1.25rem;
+    padding: 0.625rem 0.9375rem;
+  }
+}
+
+.hHKVIf:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.iapBka {
+  position: absolute;
+  inset: 0px;
+}
+
+.bYkARc {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+}
+
+.kNvokt {
+  line-height: 0;
+  height: 16px;
+  width: 16px;
+}
+
+.cEWHhy {
+  transition: transform 0.1s linear 0s;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.bxeWrb {
+  margin-left: 0.75rem;
+}
+
+img {
+  display: inline-block;
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+.dRCknD {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0px;
+}
+
+.ckQZCr {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  object-fit: cover;
+  width: auto;
+  height: auto;
+}
+
+.irXPbJ {
+  max-height: 3.125rem;
+  max-width: 9.375rem;
+}

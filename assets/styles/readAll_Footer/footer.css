@@ -72,8 +72,7 @@ footer * a:hover {
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 4.375rem;
   width: 4.375rem;
   margin-right: 0.75rem;
@@ -278,9 +277,7 @@ footer * a:hover {
   width: 100%;
 }
 .Footer-Container .Footer-Email .Footer-Email-Input-Button .Footer-Email-Input .Footer-Email-Label {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -318,9 +315,7 @@ footer * a:hover {
   font-size: 0.8em;
 }
 .Footer-Container .Footer-Email .Footer-Email-Input-Button .Footer-Email-Input .Footer-Email-Label span {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   display: block;
   position: absolute;
   top: 1.25rem;
@@ -476,4 +471,6 @@ footer * a:hover {
   margin-top: 0px;
   margin-bottom: 1.875rem;
   padding: 0px 1.25rem;
-}/*# sourceMappingURL=footer.css.map */
+}
+
+/*# sourceMappingURL=footer.css.map */
