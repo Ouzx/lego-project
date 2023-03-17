@@ -1,71 +1,81 @@
-const carousel = document.querySelector(".carousel-mps");
-firstImg = carousel.querySelectorAll("img")[0];
-arrowIcons = document.querySelectorAll(".wrapper-mps i");
+const carouselHJ = document.querySelector(".carousel-mps");
+arrofirstImgHJ = carouselHJ.querySelectorAll("img")[0];
+aarrowIconsHJ = document.querySelectorAll(".wrapper-mps i");
 
-let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+let isDragStartHJ = false,
+  isDraggingHJ = false,
+  prevPageXHJ,
+  prevScrollLeftHJ,
+  positionDiffHJ;
 
-const showHideIcons = () => {
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block"
-    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block"
-}
-
-arrowIcons.forEach(icon => {
-    let firstImgWidth = firstImg.clientWidth + 14;
-    icon.addEventListener("click", () => {
-        carousel.scrollLeft += icon.id == "left-mps" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHideIcons(), 60);
-    });
-});
-
-const autoSlide = () => {
-    if (carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) {
-        return;
-    }
-
-    positionDiff = Math.abs(positionDiff);
-    let firstImgWidth = firstImg.clientWidth + 14;
-    let valDifference = firstImgWidth - positionDiff;
-
-    if (carousel.scrollLeft > prevScrollLeft) {
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-
+const showHideIconsHJ = () => {
+  let scrollWidth = carouselHJ.scrollWidth - carouselHJ.clientWidth;
+  aarrowIconsHJ[0].style.display =
+    carouselHJ.scrollLeft == 0 ? "none" : "block";
+  aarrowIconsHJ[1].style.display =
+    carouselHJ.scrollLeft == scrollWidth ? "none" : "block";
 };
 
-const dragStart = (e) => {
-    isDragStart = true;
-    prevPageX = e.pageX || e.touches[0].pageX;
-    prevScrollLeft = carousel.scrollLeft
-}
+aarrowIconsHJ.forEach((icon) => {
+  let firstImgWidth = arrofirstImgHJ.clientWidth + 14;
+  icon.addEventListener("click", () => {
+    carouselHJ.scrollLeft +=
+      icon.id == "left-mps" ? -firstImgWidth : firstImgWidth;
+    setTimeout(() => showHideIconsHJ(), 60);
+  });
+});
 
-const dragging = (e) => {
-    if (!isDragStart) return;
-    e.preventDefault();
-    isDragging = true;
-    carousel.classList.add("dragging");
-    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-    carousel.scrollLeft = prevScrollLeft - positionDiff;
-    showHideIcons();
-}
+const autoSlideHJ = () => {
+  if (
+    carouselHJ.scrollLeft ==
+    carouselHJ.scrollWidth - carouselHJ.clientWidth
+  ) {
+    return;
+  }
 
-const dragStop = () => {
-    isDragStart = false;
-    carousel.classList.remove("dragging");
+  positionDiffHJ = Math.abs(positionDiffHJ);
+  let firstImgWidth = arrofirstImgHJ.clientWidth + 14;
+  let valDifference = firstImgWidth - positionDiffHJ;
 
-    if (!isDragging) return;
-    isDragging = false;
-    autoSlide();
-}
+  if (carouselHJ.scrollLeft > prevScrollLeftHJ) {
+    return (carouselHJ.scrollLeft +=
+      positionDiffHJ > firstImgWidth / 3 ? valDifference : -positionDiffHJ);
+  }
+  carouselHJ.scrollLeft -=
+    positionDiffHJ > firstImgWidth / 3 ? valDifference : -positionDiffHJ;
+};
 
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
+const dragStartHJ = (e) => {
+  isDragStartHJ = true;
+  prevPageXHJ = e.pageX || e.touches[0].pageX;
+  prevScrollLeftHJ = carouselHJ.scrollLeft;
+};
 
-carousel.addEventListener("mousemove", dragging);
-carousel.addEventListener("touchmove", dragging);
+const draggingHJ = (e) => {
+  if (!isDragStartHJ) return;
+  e.preventDefault();
+  isDraggingHJ = true;
+  carouselHJ.classList.add("dragging");
+  positionDiffHJ = (e.pageX || e.touches[0].pageX) - prevPageXHJ;
+  carouselHJ.scrollLeft = prevScrollLeftHJ - positionDiffHJ;
+  showHideIconsHJ();
+};
 
-carousel.addEventListener("mouseup", dragStop);
-carousel.addEventListener("mouseleave", dragStop);
-carousel.addEventListener("touchend", dragStop);
+const dragStopHJ = () => {
+  isDragStartHJ = false;
+  carouselHJ.classList.remove("dragging");
 
+  if (!isDraggingHJ) return;
+  isDraggingHJ = false;
+  autoSlideHJ();
+};
+
+carouselHJ.addEventListener("mousedown", dragStartHJ);
+carouselHJ.addEventListener("touchstart", dragStartHJ);
+
+carouselHJ.addEventListener("mousemove", draggingHJ);
+carouselHJ.addEventListener("touchmove", draggingHJ);
+
+carouselHJ.addEventListener("mouseup", dragStopHJ);
+carouselHJ.addEventListener("mouseleave", dragStopHJ);
+carouselHJ.addEventListener("touchend", dragStopHJ);

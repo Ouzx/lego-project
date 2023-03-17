@@ -1,71 +1,80 @@
-const carousel = document.querySelector(".carousel-fs");
-firstImg = carousel.querySelectorAll("img")[0];
-arrowIcons = document.querySelectorAll(".wrapper-fs i");
+const carouselVB = document.querySelector(".carousel-fs");
+firstImgVB = carouselVB.querySelectorAll("img")[0];
+arrowIconsVB = document.querySelectorAll(".wrapper-fs i");
 
-let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+let isDragStartVB = false,
+  isDraggingVB = false,
+  prevPageXVB,
+  prevScrollLeftVB,
+  positionDiffVB;
 
-const showHideIcons = () => {
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block"
-    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block"
-}
-
-arrowIcons.forEach(icon => {
-    let firstImgWidth = firstImg.clientWidth + 14;
-    icon.addEventListener("click", () => {
-        carousel.scrollLeft += icon.id == "left-fs" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHideIcons(), 60);
-    });
-});
-
-const autoSlide = () => {
-    if (carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) {
-        return;
-    }
-
-    positionDiff = Math.abs(positionDiff);
-    let firstImgWidth = firstImg.clientWidth + 14;
-    let valDifference = firstImgWidth - positionDiff;
-
-    if (carousel.scrollLeft > prevScrollLeft) {
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-
+const showHideIconsVB = () => {
+  let scrollWidth = carouselVB.scrollWidth - carouselVB.clientWidth;
+  arrowIconsVB[0].style.display = carouselVB.scrollLeft == 0 ? "none" : "block";
+  arrowIconsVB[1].style.display =
+    carouselVB.scrollLeft == scrollWidth ? "none" : "block";
 };
 
-const dragStart = (e) => {
-    isDragStart = true;
-    prevPageX = e.pageX || e.touches[0].pageX;
-    prevScrollLeft = carousel.scrollLeft
-}
+arrowIconsVB.forEach((icon) => {
+  let firstImgWidth = firstImgVB.clientWidth + 14;
+  icon.addEventListener("click", () => {
+    carouselVB.scrollLeft +=
+      icon.id == "left-fs" ? -firstImgWidth : firstImgWidth;
+    setTimeout(() => showHideIconsVB(), 60);
+  });
+});
 
-const dragging = (e) => {
-    if (!isDragStart) return;
-    e.preventDefault();
-    isDragging = true;
-    carousel.classList.add("dragging");
-    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-    carousel.scrollLeft = prevScrollLeft - positionDiff;
-    showHideIcons();
-}
+const autoSlideVB = () => {
+  if (
+    carouselVB.scrollLeft ==
+    carouselVB.scrollWidth - carouselVB.clientWidth
+  ) {
+    return;
+  }
 
-const dragStop = () => {
-    isDragStart = false;
-    carousel.classList.remove("dragging");
+  positionDiffVB = Math.abs(positionDiffVB);
+  let firstImgWidth = firstImgVB.clientWidth + 14;
+  let valDifference = firstImgWidth - positionDiffVB;
 
-    if (!isDragging) return;
-    isDragging = false;
-    autoSlide();
-}
+  if (carouselVB.scrollLeft > prevScrollLeftVB) {
+    return (carouselVB.scrollLeft +=
+      positionDiffVB > firstImgWidth / 3 ? valDifference : -positionDiffVB);
+  }
+  carouselVB.scrollLeft -=
+    positionDiffVB > firstImgWidth / 3 ? valDifference : -positionDiffVB;
+};
 
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
+const dragStartVB = (e) => {
+  isDragStartVB = true;
+  prevPageXVB = e.pageX || e.touches[0].pageX;
+  prevScrollLeftVB = carouselVB.scrollLeft;
+};
 
-carousel.addEventListener("mousemove", dragging);
-carousel.addEventListener("touchmove", dragging);
+const draggingVB = (e) => {
+  if (!isDragStartVB) return;
+  e.preventDefault();
+  isDraggingVB = true;
+  carouselVB.classList.add("dragging");
+  positionDiffVB = (e.pageX || e.touches[0].pageX) - prevPageXVB;
+  carouselVB.scrollLeft = prevScrollLeftVB - positionDiffVB;
+  showHideIconsVB();
+};
 
-carousel.addEventListener("mouseup", dragStop);
-carousel.addEventListener("mouseleave", dragStop);
-carousel.addEventListener("touchend", dragStop);
+const dragStopVB = () => {
+  isDragStartVB = false;
+  carouselVB.classList.remove("dragging");
 
+  if (!isDraggingVB) return;
+  isDraggingVB = false;
+  autoSlideVB();
+};
+
+carouselVB.addEventListener("mousedown", dragStartVB);
+carouselVB.addEventListener("touchstart", dragStartVB);
+
+carouselVB.addEventListener("mousemove", draggingVB);
+carouselVB.addEventListener("touchmove", draggingVB);
+
+carouselVB.addEventListener("mouseup", dragStopVB);
+carouselVB.addEventListener("mouseleave", dragStopVB);
+carouselVB.addEventListener("touchend", dragStopVB);
